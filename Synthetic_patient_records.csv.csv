@@ -1,0 +1,501 @@
+patient_id,age,gender,height_cm,weight_kg,bmi,bmi_original,bmi_corrected,symptoms,medical_history,smoking_status,physical_activity,systolic_bp_mmhg,diastolic_bp_mmhg,bp_check,heart_rate_bpm,temperature_c,oxygen_saturation_pct,glucose_mg_dl,total_cholesterol_mg_dl,diagnosis_label,medication_category,data_type
+SYN0001,76,Male,166,67.4,24.5,22.0,Yes,Headache,Family history of heart disease,Never,High,155,87,OK,69,36.7,100,106,201,Hypertension,Antihypertensive,Synthetic
+SYN0002,73,Female,153,76.5,32.7,24.7,Yes,No reported symptoms,Previous respiratory illness,Current,Moderate,131,108,OK,65,37.0,97,103,207,Hypertension,Antihypertensive,Synthetic
+SYN0003,19,Female,171,101.7,34.8,38.5,Yes,Frequent urination,Family history of diabetes,Never,Moderate,114,89,OK,77,37.1,96,83,184,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0004,53,Female,162,43.8,16.7,20.3,Yes,Fatigue,Previous respiratory illness,Never,Moderate,123,64,OK,66,37.3,98,115,179,No diagnosis,No medication,Synthetic
+SYN0005,58,Male,162,112.0,42.7,35.9,Yes,No reported symptoms,Previous respiratory illness,Never,Moderate,150,82,OK,73,37.7,96,102,217,Hypertension,Antihypertensive,Synthetic
+SYN0006,42,Male,170,69.8,24.2,29.2,Yes,Headache,Previous respiratory illness,Never,High,108,85,OK,70,37.3,98,124,206,Hypertension,Antihypertensive,Synthetic
+SYN0007,28,Female,163,79.1,29.8,28.0,Yes,Headache,Previous respiratory illness,Never,Low,117,69,OK,92,36.4,96,110,115,Hypertension,Antihypertensive,Synthetic
+SYN0008,67,Other,169,88.0,30.8,27.8,Yes,Fatigue,Family history of diabetes,Never,Moderate,136,92,OK,61,36.5,96,93,218,No diagnosis,No medication,Synthetic
+SYN0009,71,Female,162,81.1,30.9,30.1,Yes,No reported symptoms,Family history of diabetes,Never,High,162,89,OK,50,36.7,99,135,189,Hypertension,Antihypertensive,Synthetic
+SYN0010,65,Male,173,97.2,32.5,31.9,Yes,Routine check-up,Previous respiratory illness,Never,High,136,83,OK,87,36.6,96,60,238,No diagnosis,No medication,Synthetic
+SYN0011,59,Male,182,107.2,32.4,37.9,Yes,Dizziness,Sedentary lifestyle,Current,Low,137,90,OK,75,36.1,93,133,163,Hypertension,Antihypertensive,Synthetic
+SYN0012,20,Male,167,44.3,15.9,18.1,Yes,Routine check-up,Family history of heart disease,Former,High,102,66,OK,78,37.6,99,60,190,No diagnosis,No medication,Synthetic
+SYN0013,21,Male,174,90.4,29.9,30.6,Yes,Sore throat,Smoking history,Never,Moderate,138,64,OK,73,38.0,99,141,176,Respiratory Infection,Supportive care,Synthetic
+SYN0014,74,Female,174,79.2,26.2,28.8,Yes,Headache,Smoking history,Never,Moderate,98,99,Review: diastolic >= systolic,80,37.3,98,106,158,Hypertension,Antihypertensive,Synthetic
+SYN0015,35,Female,147,77.4,35.8,26.4,Yes,Headache,Family history of heart disease,Never,High,108,96,OK,63,36.5,94,142,172,Hypertension,Antihypertensive,Synthetic
+SYN0016,46,Female,160,92.5,36.1,33.6,Yes,Dizziness,Smoking history,Never,Moderate,152,88,OK,81,36.4,96,123,154,Hypertension,Antihypertensive,Synthetic
+SYN0017,71,Female,168,65.8,23.3,25.0,Yes,No reported symptoms,Family history of diabetes,Never,Moderate,95,73,OK,66,37.2,95,95,152,No diagnosis,No medication,Synthetic
+SYN0018,40,Female,156,106.2,43.6,40.5,Yes,Routine check-up,Sedentary lifestyle,Never,High,149,84,OK,75,37.1,98,93,183,No diagnosis,No medication,Synthetic
+SYN0019,82,Male,176,72.2,23.3,28.5,Yes,Headache,Family history of diabetes,Former,Low,120,76,OK,81,36.9,96,145,193,Hypertension,Antihypertensive,Synthetic
+SYN0020,53,Female,155,65.7,27.3,24.2,Yes,Headache,Sedentary lifestyle,Never,Low,124,97,OK,74,36.8,100,75,245,Hypertension,Antihypertensive,Synthetic
+SYN0021,82,Female,149,91.8,41.3,33.7,Yes,Increased thirst,Smoking history,Current,High,145,84,OK,82,36.7,97,125,236,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0022,90,Male,161,72.1,27.8,23.7,Yes,Shortness of breath,Smoking history,Current,Low,143,73,OK,90,37.2,97,106,229,Asthma,Inhaler,Synthetic
+SYN0023,23,Female,157,70.4,28.6,28.9,Yes,Fatigue,No history reported,Never,Moderate,128,60,OK,98,36.9,97,91,181,No diagnosis,No medication,Synthetic
+SYN0024,53,Male,174,93.2,30.8,31.0,Yes,No reported symptoms,Family history of heart disease,Never,High,148,64,OK,76,37.2,93,137,176,No diagnosis,No medication,Synthetic
+SYN0025,84,Male,170,51.0,17.6,18.6,Yes,Routine check-up,No history reported,Never,High,116,66,OK,64,36.9,100,145,159,No diagnosis,No medication,Synthetic
+SYN0026,23,Male,165,63.5,23.3,30.6,Yes,Dizziness,Smoking history,Never,Low,129,80,OK,62,36.0,96,66,175,Hypertension,Antihypertensive,Synthetic
+SYN0027,80,Male,174,103.5,34.2,33.6,Yes,No reported symptoms,Family history of heart disease,Never,Low,121,100,OK,77,36.8,96,107,155,Hypertension,Antihypertensive,Synthetic
+SYN0028,46,Female,170,59.8,20.7,23.0,Yes,Wheezing,No history reported,Never,Moderate,122,73,OK,90,36.5,95,96,228,Asthma,Inhaler,Synthetic
+SYN0029,36,Female,165,56.2,20.6,19.7,Yes,Wheezing,Sedentary lifestyle,Never,Moderate,104,82,OK,84,37.3,95,97,246,Asthma,Inhaler,Synthetic
+SYN0030,58,Female,161,86.8,33.5,31.1,Yes,No reported symptoms,Sedentary lifestyle,Never,Low,131,69,OK,65,36.7,97,118,205,No diagnosis,No medication,Synthetic
+SYN0031,58,Female,157,86.4,35.1,33.0,Yes,Fatigue,Family history of heart disease,Never,Low,96,76,OK,57,37.0,98,164,178,No diagnosis,No medication,Synthetic
+SYN0032,70,Male,163,93.7,35.3,32.3,Yes,Routine check-up,Family history of heart disease,Never,Low,119,86,OK,80,36.6,98,105,181,No diagnosis,No medication,Synthetic
+SYN0033,73,Female,151,60.5,26.5,21.1,Yes,No reported symptoms,Family history of heart disease,Never,Moderate,125,84,OK,87,37.0,98,133,222,Hypertension,Antihypertensive,Synthetic
+SYN0034,75,Female,157,72.6,29.5,29.3,Yes,Increased thirst,Family history of heart disease,Never,Moderate,138,76,OK,87,37.4,98,131,190,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0035,87,Male,179,72.5,22.6,29.5,Yes,Headache,Family history of heart disease,Current,Moderate,156,82,OK,87,36.9,94,172,164,Hypertension,Antihypertensive,Synthetic
+SYN0036,63,Male,164,68.2,25.4,22.2,Yes,No reported symptoms,Family history of heart disease,Former,Moderate,144,84,OK,96,36.8,95,125,202,No diagnosis,No medication,Synthetic
+SYN0037,34,Male,165,78.4,28.8,26.9,Yes,Frequent urination,No history reported,Former,High,148,75,OK,76,36.3,100,182,185,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0038,68,Female,145,117.0,55.6,37.2,Yes,Routine check-up,Family history of heart disease,Never,High,136,86,OK,64,36.8,97,129,221,No diagnosis,No medication,Synthetic
+SYN0039,33,Male,172,54.0,18.3,21.1,Yes,No reported symptoms,Smoking history,Never,Moderate,105,77,OK,56,36.8,98,118,179,Hypertension,Antihypertensive,Synthetic
+SYN0040,38,Female,144,68.9,33.2,23.5,Yes,Routine check-up,Sedentary lifestyle,Never,Moderate,143,81,OK,83,36.4,94,91,223,No diagnosis,No medication,Synthetic
+SYN0041,44,Male,149,79.5,35.8,28.0,Yes,Increased thirst,Family history of diabetes,Never,Moderate,92,81,OK,86,35.6,98,134,213,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0042,80,Male,175,68.5,22.4,28.4,Yes,No reported symptoms,Smoking history,Never,High,183,84,OK,98,36.7,98,117,117,Hypertension,Antihypertensive,Synthetic
+SYN0043,69,Female,158,100.2,40.1,39.0,Yes,Routine check-up,Sedentary lifestyle,Never,Moderate,130,90,OK,97,37.5,95,60,221,No diagnosis,No medication,Synthetic
+SYN0044,23,Male,167,70.2,25.2,23.6,Yes,Routine check-up,No history reported,Current,High,115,85,OK,72,37.1,98,127,148,No diagnosis,No medication,Synthetic
+SYN0045,75,Female,162,52.5,20.0,19.8,Yes,No reported symptoms,Family history of diabetes,Never,High,100,77,OK,73,35.8,100,144,190,No diagnosis,No medication,Synthetic
+SYN0046,65,Male,150,63.9,28.4,19.9,Yes,Frequent urination,Sedentary lifestyle,Current,Low,137,88,OK,78,37.1,100,159,194,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0047,34,Male,162,83.0,31.6,25.5,Yes,Frequent urination,No history reported,Never,Moderate,97,85,OK,87,37.1,96,93,183,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0048,87,Male,165,68.1,25.0,23.9,Yes,No reported symptoms,Smoking history,Former,Moderate,157,80,OK,98,37.1,100,102,231,Hypertension,Antihypertensive,Synthetic
+SYN0049,65,Male,187,95.9,27.4,30.1,Yes,No reported symptoms,Previous respiratory illness,Former,Moderate,131,73,OK,67,36.3,95,116,232,No diagnosis,No medication,Synthetic
+SYN0050,84,Female,169,94.3,33.0,28.4,Yes,Dizziness,Smoking history,Never,Moderate,126,98,OK,57,37.1,100,131,192,Hypertension,Antihypertensive,Synthetic
+SYN0051,78,Male,151,68.1,29.9,21.5,Yes,Routine check-up,Family history of diabetes,Never,Low,124,62,OK,96,36.3,97,112,208,No diagnosis,No medication,Synthetic
+SYN0052,62,Male,162,64.7,24.7,24.7,No,No reported symptoms,Sedentary lifestyle,Never,Moderate,113,79,OK,77,35.8,97,107,222,No diagnosis,No medication,Synthetic
+SYN0053,22,Male,169,47.7,16.7,18.5,Yes,No reported symptoms,Previous respiratory illness,Never,High,96,70,OK,80,36.9,99,134,177,No diagnosis,No medication,Synthetic
+SYN0054,38,Male,164,73.6,27.4,22.5,Yes,Headache,Sedentary lifestyle,Never,High,123,102,OK,80,36.7,99,162,225,Hypertension,Antihypertensive,Synthetic
+SYN0055,30,Female,149,68.8,31.0,23.5,Yes,No reported symptoms,Previous respiratory illness,Former,Low,130,83,OK,83,36.2,97,94,200,No diagnosis,No medication,Synthetic
+SYN0056,74,Female,152,76.6,33.2,24.2,Yes,No reported symptoms,No history reported,Former,Low,97,83,OK,73,36.2,99,115,206,No diagnosis,No medication,Synthetic
+SYN0057,75,Female,165,99.0,36.4,34.4,Yes,Fatigue,Sedentary lifestyle,Current,Low,122,85,OK,72,36.8,97,120,202,No diagnosis,No medication,Synthetic
+SYN0058,62,Male,158,81.5,32.6,25.8,Yes,Dizziness,No history reported,Never,Moderate,119,79,OK,77,37.8,97,123,194,Hypertension,Antihypertensive,Synthetic
+SYN0059,85,Female,152,70.8,30.6,24.6,Yes,No reported symptoms,Smoking history,Current,Low,152,79,OK,81,37.6,98,168,197,Hypertension,Antihypertensive,Synthetic
+SYN0060,77,Female,163,88.4,33.3,30.9,Yes,Fatigue,Family history of diabetes,Never,Moderate,118,72,OK,74,36.7,98,101,247,No diagnosis,No medication,Synthetic
+SYN0061,72,Female,165,57.6,21.2,19.8,Yes,Increased thirst,Smoking history,Never,High,149,74,OK,85,37.1,98,104,215,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0062,74,Male,172,123.8,41.8,37.1,Yes,Headache,Smoking history,Current,Moderate,151,85,OK,109,36.6,98,100,223,Hypertension,Antihypertensive,Synthetic
+SYN0063,68,Male,179,75.5,23.6,30.4,Yes,No reported symptoms,Family history of heart disease,Former,Low,144,79,OK,71,36.9,97,151,201,Hypertension,Antihypertensive,Synthetic
+SYN0064,20,Female,147,62.3,28.8,24.1,Yes,Wheezing,Sedentary lifestyle,Never,High,95,59,OK,93,36.6,98,78,198,Asthma,Inhaler,Synthetic
+SYN0065,88,Female,153,92.8,39.6,33.5,Yes,Fatigue,No history reported,Never,Low,128,79,OK,109,36.9,96,62,148,No diagnosis,No medication,Synthetic
+SYN0066,40,Male,175,65.7,21.5,25.7,Yes,Fatigue,Previous respiratory illness,Never,Low,124,86,OK,75,36.4,97,98,185,No diagnosis,No medication,Synthetic
+SYN0067,54,Male,172,71.7,24.2,23.4,Yes,Dizziness,Family history of diabetes,Never,Moderate,152,93,OK,82,36.3,96,146,226,Hypertension,Antihypertensive,Synthetic
+SYN0068,31,Male,163,52.9,19.9,18.7,Yes,Cough,Family history of diabetes,Current,Moderate,119,88,OK,73,36.6,99,87,160,Asthma,Inhaler,Synthetic
+SYN0069,90,Male,166,102.8,37.3,31.0,Yes,Routine check-up,Previous respiratory illness,Current,Low,123,60,OK,78,37.3,94,128,192,No diagnosis,No medication,Synthetic
+SYN0070,75,Male,177,63.5,20.3,22.2,Yes,Shortness of breath,Smoking history,Never,Moderate,149,76,OK,107,36.7,97,92,211,Heart Disease,Cardiac medicine,Synthetic
+SYN0071,52,Male,145,77.8,37.0,33.2,Yes,No reported symptoms,Family history of heart disease,Never,Low,120,73,OK,71,36.8,94,108,196,No diagnosis,No medication,Synthetic
+SYN0072,38,Male,166,80.3,29.1,27.2,Yes,No reported symptoms,Family history of heart disease,Current,Moderate,87,76,OK,61,36.8,99,123,117,No diagnosis,No medication,Synthetic
+SYN0073,19,Male,181,100.7,30.7,35.6,Yes,Routine check-up,Smoking history,Current,Moderate,85,72,OK,71,36.8,99,75,192,No diagnosis,No medication,Synthetic
+SYN0074,66,Male,155,68.4,28.5,24.5,Yes,Increased thirst,Family history of diabetes,Never,Moderate,97,86,OK,61,36.5,97,185,190,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0075,39,Male,168,91.1,32.3,30.2,Yes,Routine check-up,Family history of heart disease,Never,Moderate,115,54,OK,77,36.6,96,105,202,No diagnosis,No medication,Synthetic
+SYN0076,61,Female,161,87.9,33.9,33.3,Yes,Dizziness,Smoking history,Former,Moderate,107,80,OK,54,37.4,96,110,270,Hypertension,Antihypertensive,Synthetic
+SYN0077,57,Male,172,94.1,31.8,32.8,Yes,Fatigue,No history reported,Current,Moderate,113,56,OK,77,36.4,98,164,214,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0078,68,Female,160,41.2,16.1,16.1,No,No reported symptoms,Previous respiratory illness,Former,Moderate,150,90,OK,83,36.6,96,131,208,Hypertension,Antihypertensive,Synthetic
+SYN0079,30,Male,147,50.9,23.6,19.7,Yes,No reported symptoms,Family history of heart disease,Never,Moderate,99,80,OK,45,36.4,96,103,151,No diagnosis,No medication,Synthetic
+SYN0080,54,Male,170,107.0,37.0,39.3,Yes,Routine check-up,Family history of heart disease,Current,Low,103,73,OK,74,37.1,94,112,174,No diagnosis,No medication,Synthetic
+SYN0081,38,Female,159,77.1,30.5,31.1,Yes,Wheezing,Family history of diabetes,Current,Moderate,114,82,OK,83,36.5,98,66,235,Asthma,Inhaler,Synthetic
+SYN0082,59,Male,183,75.8,22.6,25.3,Yes,Routine check-up,Smoking history,Never,High,149,65,OK,45,36.8,98,96,169,No diagnosis,No medication,Synthetic
+SYN0083,66,Male,176,72.4,23.4,23.6,Yes,No reported symptoms,Sedentary lifestyle,Never,Low,99,79,OK,78,37.0,95,146,219,No diagnosis,No medication,Synthetic
+SYN0084,30,Female,146,83.2,39.0,30.6,Yes,No reported symptoms,Smoking history,Current,High,124,77,OK,96,37.1,96,85,144,Hypertension,Antihypertensive,Synthetic
+SYN0085,42,Female,152,64.0,27.7,21.8,Yes,Fever,Family history of diabetes,Never,Moderate,126,77,OK,67,36.9,92,124,246,Respiratory Infection,Supportive care,Synthetic
+SYN0086,43,Female,157,86.2,35.0,30.3,Yes,Wheezing,Previous respiratory illness,Current,Moderate,102,79,OK,78,37.1,94,100,172,Asthma,Inhaler,Synthetic
+SYN0087,72,Female,158,114.2,45.7,35.9,Yes,No reported symptoms,Previous respiratory illness,Never,Low,120,98,OK,82,35.8,99,93,205,Hypertension,Antihypertensive,Synthetic
+SYN0088,89,Male,182,91.5,27.6,29.9,Yes,No reported symptoms,Sedentary lifestyle,Former,Moderate,128,76,OK,47,36.7,98,137,190,Hypertension,Antihypertensive,Synthetic
+SYN0089,40,Male,161,97.6,37.7,31.6,Yes,Routine check-up,Sedentary lifestyle,Never,Low,106,73,OK,70,37.2,98,108,222,No diagnosis,No medication,Synthetic
+SYN0090,39,Female,164,47.5,17.7,20.9,Yes,Routine check-up,Family history of heart disease,Never,Moderate,119,73,OK,74,35.9,98,60,191,No diagnosis,No medication,Synthetic
+SYN0091,27,Male,153,69.0,29.5,25.6,Yes,No reported symptoms,Family history of heart disease,Never,Low,144,67,OK,72,36.5,98,67,258,Hypertension,Antihypertensive,Synthetic
+SYN0092,66,Female,179,76.0,23.7,30.4,Yes,Dizziness,Previous respiratory illness,Current,High,109,98,OK,85,36.6,95,110,191,Hypertension,Antihypertensive,Synthetic
+SYN0093,20,Male,162,85.2,32.5,32.2,Yes,No reported symptoms,No history reported,Never,Moderate,149,59,OK,77,37.2,95,108,225,No diagnosis,No medication,Synthetic
+SYN0094,81,Male,161,109.5,42.2,42.3,No,Fatigue,Family history of heart disease,Current,Low,126,88,OK,79,36.4,97,121,170,No diagnosis,No medication,Synthetic
+SYN0095,89,Female,153,80.3,34.3,31.7,Yes,Headache,Family history of diabetes,Never,Moderate,132,100,OK,98,37.5,96,101,187,Hypertension,Antihypertensive,Synthetic
+SYN0096,69,Female,162,43.6,16.6,16.0,Yes,No reported symptoms,No history reported,Never,Moderate,95,72,OK,64,36.9,95,92,174,No diagnosis,No medication,Synthetic
+SYN0097,30,Female,151,75.3,33.0,24.6,Yes,No reported symptoms,Family history of diabetes,Never,Low,118,78,OK,69,36.9,97,86,185,No diagnosis,No medication,Synthetic
+SYN0098,19,Female,157,84.5,34.3,27.6,Yes,No reported symptoms,Previous respiratory illness,Never,Low,150,61,OK,75,36.5,96,120,145,Hypertension,Antihypertensive,Synthetic
+SYN0099,79,Female,152,102.3,44.3,38.9,Yes,Routine check-up,Smoking history,Never,Moderate,139,91,OK,75,37.2,95,98,227,No diagnosis,No medication,Synthetic
+SYN0100,84,Male,165,72.4,26.6,24.2,Yes,Routine check-up,Family history of heart disease,Never,Low,96,71,OK,64,36.5,98,108,241,No diagnosis,No medication,Synthetic
+SYN0101,51,Male,154,68.9,29.1,26.0,Yes,No reported symptoms,Sedentary lifestyle,Never,High,149,80,OK,100,36.2,100,88,216,No diagnosis,No medication,Synthetic
+SYN0102,50,Female,149,75.5,34.0,27.4,Yes,No reported symptoms,Sedentary lifestyle,Never,Moderate,127,69,OK,68,37.0,95,125,200,No diagnosis,No medication,Synthetic
+SYN0103,76,Female,154,80.0,33.7,28.8,Yes,No reported symptoms,Previous respiratory illness,Never,Moderate,126,83,OK,93,36.9,100,150,204,Hypertension,Antihypertensive,Synthetic
+SYN0104,31,Female,163,97.4,36.7,29.6,Yes,Fatigue,Family history of diabetes,Former,High,121,67,OK,70,36.9,99,67,265,No diagnosis,No medication,Synthetic
+SYN0105,58,Male,165,91.3,33.5,29.1,Yes,Wheezing,Sedentary lifestyle,Never,Moderate,129,85,OK,85,36.6,93,121,255,Asthma,Inhaler,Synthetic
+SYN0106,82,Male,164,66.8,24.8,25.8,Yes,Dizziness,No history reported,Former,Moderate,145,93,OK,78,36.5,99,101,233,Hypertension,Antihypertensive,Synthetic
+SYN0107,46,Male,169,80.8,28.3,26.3,Yes,No reported symptoms,Previous respiratory illness,Never,Low,140,70,OK,71,37.2,97,156,261,No diagnosis,No medication,Synthetic
+SYN0108,43,Male,171,57.6,19.7,20.1,Yes,Fatigue,Sedentary lifestyle,Never,Low,138,76,OK,77,37.3,96,128,225,No diagnosis,No medication,Synthetic
+SYN0109,19,Male,170,60.3,20.9,21.4,Yes,Headache,Smoking history,Never,Moderate,116,77,OK,71,36.5,96,105,195,Hypertension,Antihypertensive,Synthetic
+SYN0110,84,Male,153,86.5,37.0,30.3,Yes,Shortness of breath,Smoking history,Never,High,129,79,OK,85,37.0,96,120,212,Asthma,Inhaler,Synthetic
+SYN0111,72,Male,157,78.8,32.0,28.4,Yes,No reported symptoms,Previous respiratory illness,Former,High,142,87,OK,63,36.9,98,102,196,Hypertension,Antihypertensive,Synthetic
+SYN0112,88,Female,165,52.8,19.4,17.3,Yes,No reported symptoms,Smoking history,Never,Moderate,159,96,OK,101,36.8,95,139,180,Hypertension,Antihypertensive,Synthetic
+SYN0113,58,Male,179,89.3,27.9,30.4,Yes,No reported symptoms,Sedentary lifestyle,Never,High,112,80,OK,82,36.8,99,104,173,No diagnosis,No medication,Synthetic
+SYN0114,85,Male,164,75.9,28.2,28.4,Yes,No reported symptoms,Sedentary lifestyle,Never,Low,140,75,OK,68,37.1,94,94,188,No diagnosis,No medication,Synthetic
+SYN0115,46,Male,172,47.4,16.0,16.5,Yes,Routine check-up,No history reported,Never,Low,93,77,OK,89,37.5,98,85,220,No diagnosis,No medication,Synthetic
+SYN0116,83,Female,163,61.4,23.1,19.8,Yes,Headache,Sedentary lifestyle,Never,Moderate,134,95,OK,86,37.2,95,102,202,Hypertension,Antihypertensive,Synthetic
+SYN0117,44,Other,147,99.4,46.0,34.8,Yes,Fatigue,Family history of heart disease,Never,Low,117,77,OK,70,36.3,98,112,109,No diagnosis,No medication,Synthetic
+SYN0118,73,Female,168,59.9,21.2,21.5,Yes,Headache,Previous respiratory illness,Current,High,112,95,OK,84,37.2,98,79,219,Hypertension,Antihypertensive,Synthetic
+SYN0119,85,Female,166,68.9,25.0,21.9,Yes,No reported symptoms,Previous respiratory illness,Never,High,137,84,OK,72,36.0,100,112,249,No diagnosis,No medication,Synthetic
+SYN0120,52,Male,162,104.1,39.7,30.5,Yes,Routine check-up,Family history of heart disease,Never,Moderate,110,79,OK,66,36.6,96,142,192,No diagnosis,No medication,Synthetic
+SYN0121,51,Female,152,69.8,30.2,24.7,Yes,No reported symptoms,Family history of diabetes,Never,Moderate,144,81,OK,72,37.3,97,113,194,No diagnosis,No medication,Synthetic
+SYN0122,39,Female,144,87.7,42.3,30.9,Yes,Routine check-up,Smoking history,Never,Low,133,80,OK,107,36.2,94,60,152,No diagnosis,No medication,Synthetic
+SYN0123,22,Female,171,102.4,35.0,36.9,Yes,Routine check-up,Family history of heart disease,Never,Moderate,132,63,OK,76,36.4,98,65,131,No diagnosis,No medication,Synthetic
+SYN0124,42,Female,158,86.9,34.8,29.3,Yes,Headache,Sedentary lifestyle,Current,Low,95,99,Review: diastolic >= systolic,53,37.5,98,62,228,Hypertension,Antihypertensive,Synthetic
+SYN0125,48,Female,156,63.7,26.2,20.5,Yes,Dizziness,Family history of heart disease,Never,Moderate,106,74,OK,68,37.3,98,84,154,Hypertension,Antihypertensive,Synthetic
+SYN0126,87,Male,182,69.2,20.9,22.9,Yes,No reported symptoms,Family history of heart disease,Former,High,141,82,OK,92,36.5,95,118,190,No diagnosis,No medication,Synthetic
+SYN0127,22,Female,160,64.5,25.2,22.5,Yes,Headache,Sedentary lifestyle,Current,Moderate,121,85,OK,60,37.5,95,101,150,Hypertension,Antihypertensive,Synthetic
+SYN0128,62,Male,159,75.0,29.7,26.8,Yes,Dizziness,Sedentary lifestyle,Never,Moderate,116,76,OK,68,36.5,99,152,194,Hypertension,Antihypertensive,Synthetic
+SYN0129,33,Female,169,85.4,29.9,30.8,Yes,Dizziness,Previous respiratory illness,Never,Moderate,139,99,OK,86,36.5,96,60,205,Hypertension,Antihypertensive,Synthetic
+SYN0130,79,Female,158,54.8,22.0,22.7,Yes,Fatigue,Smoking history,Never,Moderate,113,83,OK,86,37.9,94,83,194,No diagnosis,No medication,Synthetic
+SYN0131,24,Female,167,95.1,34.1,30.2,Yes,No reported symptoms,Family history of diabetes,Never,Moderate,130,81,OK,59,36.7,96,115,182,No diagnosis,No medication,Synthetic
+SYN0132,29,Male,171,130.6,44.7,44.3,Yes,Dizziness,Smoking history,Never,Moderate,109,90,OK,70,36.4,95,70,181,Hypertension,Antihypertensive,Synthetic
+SYN0133,58,Female,158,88.1,35.3,29.3,Yes,Frequent urination,Smoking history,Never,Moderate,125,72,OK,60,37.1,93,88,243,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0134,28,Other,151,94.2,41.3,27.9,Yes,Routine check-up,Family history of heart disease,Current,High,115,78,OK,80,36.0,100,93,186,No diagnosis,No medication,Synthetic
+SYN0135,72,Female,169,84.5,29.6,32.0,Yes,No reported symptoms,Family history of diabetes,Never,Moderate,119,90,OK,79,36.6,97,127,153,No diagnosis,No medication,Synthetic
+SYN0136,78,Female,160,94.6,37.0,32.9,Yes,Headache,Previous respiratory illness,Former,Low,154,107,OK,77,36.9,99,127,180,Hypertension,Antihypertensive,Synthetic
+SYN0137,61,Female,154,62.2,26.2,24.2,Yes,Routine check-up,Family history of diabetes,Never,Low,122,70,OK,97,36.8,97,123,173,No diagnosis,No medication,Synthetic
+SYN0138,29,Female,177,105.9,33.8,39.7,Yes,No reported symptoms,Smoking history,Former,Moderate,115,60,OK,67,36.7,96,90,173,No diagnosis,No medication,Synthetic
+SYN0139,34,Female,166,83.9,30.4,31.4,Yes,Routine check-up,Family history of diabetes,Never,Low,103,88,OK,73,36.3,96,61,179,No diagnosis,No medication,Synthetic
+SYN0140,68,Male,162,63.3,24.1,20.6,Yes,No reported symptoms,Smoking history,Never,Low,152,98,OK,68,37.0,97,104,243,Hypertension,Antihypertensive,Synthetic
+SYN0141,68,Male,165,84.0,30.9,31.9,Yes,Routine check-up,Previous respiratory illness,Former,Moderate,134,74,OK,48,36.3,97,90,246,No diagnosis,No medication,Synthetic
+SYN0142,67,Female,160,93.9,36.7,33.4,Yes,Fatigue,Smoking history,Never,Moderate,136,76,OK,59,37.2,99,106,115,No diagnosis,No medication,Synthetic
+SYN0143,18,Male,156,52.2,21.4,17.0,Yes,Routine check-up,Family history of diabetes,Never,Low,115,67,OK,74,37.8,96,66,173,No diagnosis,No medication,Synthetic
+SYN0144,90,Male,170,97.5,33.7,34.3,Yes,Cough,Smoking history,Never,High,110,79,OK,98,36.9,99,122,162,Asthma,Inhaler,Synthetic
+SYN0145,39,Female,154,80.4,33.9,27.2,Yes,Routine check-up,Smoking history,Never,Moderate,120,91,OK,82,35.8,97,65,194,No diagnosis,No medication,Synthetic
+SYN0146,89,Female,159,98.3,38.9,29.8,Yes,No reported symptoms,No history reported,Former,Moderate,107,77,OK,69,36.5,97,104,197,No diagnosis,No medication,Synthetic
+SYN0147,82,Female,156,71.4,29.3,23.6,Yes,No reported symptoms,Smoking history,Former,High,129,81,OK,72,36.6,98,146,192,No diagnosis,No medication,Synthetic
+SYN0148,49,Male,168,69.1,24.5,25.5,Yes,Cough,Family history of heart disease,Current,Moderate,137,71,OK,82,38.3,99,143,189,Respiratory Infection,Supportive care,Synthetic
+SYN0149,41,Male,179,81.2,25.3,26.4,Yes,Shortness of breath,Smoking history,Former,Moderate,85,80,OK,65,36.4,97,86,141,Asthma,Inhaler,Synthetic
+SYN0150,38,Female,157,53.4,21.7,23.3,Yes,Wheezing,Previous respiratory illness,Former,Moderate,127,79,OK,78,36.9,97,75,213,Asthma,Inhaler,Synthetic
+SYN0151,75,Male,167,78.2,28.0,26.5,Yes,No reported symptoms,Previous respiratory illness,Never,Moderate,126,91,OK,64,37.5,95,69,242,No diagnosis,No medication,Synthetic
+SYN0152,24,Female,154,89.2,37.6,31.6,Yes,No reported symptoms,Sedentary lifestyle,Never,High,142,59,OK,99,36.8,93,60,227,No diagnosis,No medication,Synthetic
+SYN0153,43,Female,168,58.0,20.5,19.7,Yes,Wheezing,Sedentary lifestyle,Never,Moderate,127,83,OK,80,37.1,96,118,183,Asthma,Inhaler,Synthetic
+SYN0154,80,Male,166,58.8,21.3,22.2,Yes,Fatigue,Family history of heart disease,Never,Low,134,69,OK,80,36.2,96,120,260,No diagnosis,No medication,Synthetic
+SYN0155,69,Female,154,77.4,32.6,24.8,Yes,Shortness of breath,No history reported,Never,Low,147,91,OK,66,36.8,97,103,246,Asthma,Inhaler,Synthetic
+SYN0156,22,Female,153,51.5,22.0,20.8,Yes,Routine check-up,Smoking history,Never,Moderate,133,71,OK,60,36.5,96,91,113,No diagnosis,No medication,Synthetic
+SYN0157,29,Female,177,47.2,15.1,17.8,Yes,Routine check-up,No history reported,Never,High,119,73,OK,57,36.5,96,96,210,No diagnosis,No medication,Synthetic
+SYN0158,47,Female,153,72.6,31.0,27.8,Yes,Cough,Family history of diabetes,Former,Moderate,117,69,OK,73,36.5,100,81,128,Asthma,Inhaler,Synthetic
+SYN0159,81,Female,169,95.4,33.4,41.0,Yes,Headache,No history reported,Never,Moderate,150,88,OK,53,37.8,97,140,213,Hypertension,Antihypertensive,Synthetic
+SYN0160,46,Male,170,63.8,22.1,21.1,Yes,Fatigue,Previous respiratory illness,Former,Moderate,126,80,OK,83,37.0,97,114,202,No diagnosis,No medication,Synthetic
+SYN0161,60,Male,175,64.5,21.1,18.8,Yes,Dizziness,No history reported,Current,Low,164,71,OK,59,37.0,99,81,159,Hypertension,Antihypertensive,Synthetic
+SYN0162,30,Female,160,84.0,32.8,26.9,Yes,No reported symptoms,Previous respiratory illness,Former,Low,106,87,OK,83,36.2,97,76,218,Hypertension,Antihypertensive,Synthetic
+SYN0163,87,Male,167,79.9,28.6,28.5,No,Wheezing,Family history of heart disease,Former,Moderate,133,75,OK,82,37.0,99,96,242,Asthma,Inhaler,Synthetic
+SYN0164,44,Female,149,88.6,39.9,26.0,Yes,Dizziness,Sedentary lifestyle,Never,High,154,84,OK,101,36.8,95,60,190,Hypertension,Antihypertensive,Synthetic
+SYN0165,41,Male,167,131.1,47.0,39.0,Yes,No reported symptoms,Previous respiratory illness,Never,Low,104,74,OK,65,37.7,96,89,200,No diagnosis,No medication,Synthetic
+SYN0166,53,Male,171,50.7,17.3,20.5,Yes,No reported symptoms,Family history of heart disease,Never,Moderate,143,69,OK,82,36.9,95,96,209,No diagnosis,No medication,Synthetic
+SYN0167,83,Female,157,112.7,45.7,35.7,Yes,Routine check-up,No history reported,Never,Low,149,83,OK,64,36.8,98,113,262,No diagnosis,No medication,Synthetic
+SYN0168,35,Male,158,48.4,19.4,16.1,Yes,Fatigue,Smoking history,Never,Low,100,83,OK,89,36.6,100,89,156,No diagnosis,No medication,Synthetic
+SYN0169,20,Male,178,102.7,32.4,38.6,Yes,Dizziness,Family history of heart disease,Never,Low,138,85,OK,77,36.6,98,97,207,Hypertension,Antihypertensive,Synthetic
+SYN0170,22,Female,166,73.4,26.6,23.4,Yes,Cough,Smoking history,Never,High,86,82,OK,79,36.9,98,96,219,Asthma,Inhaler,Synthetic
+SYN0171,83,Male,150,84.0,37.3,30.5,Yes,No reported symptoms,Family history of heart disease,Never,Moderate,132,99,OK,76,36.8,100,105,222,Hypertension,Antihypertensive,Synthetic
+SYN0172,29,Female,162,69.3,26.4,22.1,Yes,Fatigue,Family history of heart disease,Never,Low,106,63,OK,57,37.0,95,84,207,No diagnosis,No medication,Synthetic
+SYN0173,45,Male,164,72.9,27.1,27.5,Yes,No reported symptoms,Family history of diabetes,Current,Low,128,64,OK,65,37.1,99,165,208,No diagnosis,No medication,Synthetic
+SYN0174,41,Male,177,76.5,24.4,29.6,Yes,Sore throat,Previous respiratory illness,Never,Moderate,97,77,OK,81,38.4,98,127,180,Respiratory Infection,Supportive care,Synthetic
+SYN0175,85,Female,161,86.5,33.4,28.7,Yes,No reported symptoms,Family history of diabetes,Never,Low,133,97,OK,72,37.4,96,118,173,Hypertension,Antihypertensive,Synthetic
+SYN0176,18,Male,164,120.7,44.9,40.2,Yes,Dizziness,Sedentary lifestyle,Never,Moderate,125,80,OK,71,37.5,99,111,155,Hypertension,Antihypertensive,Synthetic
+SYN0177,43,Male,171,90.0,30.8,37.7,Yes,Frequent urination,No history reported,Former,Moderate,122,78,OK,65,36.8,96,106,208,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0178,34,Male,170,52.9,18.3,22.4,Yes,Increased thirst,Smoking history,Never,Low,132,72,OK,78,36.3,99,91,190,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0179,27,Female,161,80.3,31.0,29.4,Yes,Fatigue,Family history of diabetes,Current,High,125,77,OK,81,36.7,99,72,204,No diagnosis,No medication,Synthetic
+SYN0180,87,Female,162,61.8,23.5,25.5,Yes,Fatigue,Previous respiratory illness,Never,Low,134,81,OK,73,37.4,98,128,279,No diagnosis,No medication,Synthetic
+SYN0181,47,Female,140,85.3,43.5,28.3,Yes,Wheezing,Previous respiratory illness,Current,Low,127,74,OK,72,36.2,97,128,218,Asthma,Inhaler,Synthetic
+SYN0182,35,Female,164,60.9,22.6,22.2,Yes,No reported symptoms,Previous respiratory illness,Never,Low,107,67,OK,82,36.9,97,62,155,No diagnosis,No medication,Synthetic
+SYN0183,51,Male,170,69.1,23.9,26.7,Yes,No reported symptoms,Family history of diabetes,Current,Moderate,152,75,OK,74,36.4,93,60,134,Hypertension,Antihypertensive,Synthetic
+SYN0184,77,Other,171,77.3,26.4,32.2,Yes,No reported symptoms,Family history of heart disease,Former,High,127,77,OK,89,36.1,94,147,116,No diagnosis,No medication,Synthetic
+SYN0185,74,Male,163,62.9,23.7,21.4,Yes,Fatigue,Family history of diabetes,Never,Moderate,117,76,OK,53,37.4,98,107,201,No diagnosis,No medication,Synthetic
+SYN0186,31,Female,170,101.4,35.1,31.2,Yes,No reported symptoms,Smoking history,Never,Moderate,107,69,OK,62,37.5,94,85,165,No diagnosis,No medication,Synthetic
+SYN0187,46,Female,143,40.0,19.6,16.3,Yes,Routine check-up,Previous respiratory illness,Never,Low,124,89,OK,94,37.6,97,112,181,No diagnosis,No medication,Synthetic
+SYN0188,83,Male,174,78.7,26.0,27.9,Yes,Dizziness,Sedentary lifestyle,Never,Moderate,161,73,OK,97,37.1,100,83,203,Hypertension,Antihypertensive,Synthetic
+SYN0189,82,Female,160,85.0,33.2,29.1,Yes,Dizziness,Family history of diabetes,Never,Moderate,112,90,OK,81,36.6,95,84,211,Hypertension,Antihypertensive,Synthetic
+SYN0190,57,Male,173,75.3,25.2,26.4,Yes,Cough,Smoking history,Former,High,147,83,OK,71,36.7,94,100,209,Asthma,Inhaler,Synthetic
+SYN0191,62,Female,165,67.4,24.8,26.6,Yes,Dizziness,Smoking history,Never,High,100,78,OK,58,37.1,98,106,244,Hypertension,Antihypertensive,Synthetic
+SYN0192,63,Female,158,72.3,29.0,21.5,Yes,Headache,Family history of diabetes,Current,Moderate,137,96,OK,67,36.0,97,89,183,Hypertension,Antihypertensive,Synthetic
+SYN0193,54,Female,165,101.0,37.1,33.2,Yes,Fatigue,Previous respiratory illness,Current,Moderate,136,81,OK,76,36.6,97,122,225,No diagnosis,No medication,Synthetic
+SYN0194,82,Female,144,72.1,34.8,30.6,Yes,Headache,Smoking history,Former,Moderate,154,85,OK,76,37.0,94,64,100,Hypertension,Antihypertensive,Synthetic
+SYN0195,19,Male,163,97.1,36.5,31.8,Yes,Headache,No history reported,Never,Low,172,63,OK,67,37.1,94,103,170,Hypertension,Antihypertensive,Synthetic
+SYN0196,29,Female,157,75.5,30.6,29.3,Yes,No reported symptoms,Family history of heart disease,Never,Low,128,64,OK,61,37.6,97,138,205,No diagnosis,No medication,Synthetic
+SYN0197,56,Male,158,103.3,41.4,32.4,Yes,Headache,Smoking history,Current,Low,150,92,OK,80,35.9,92,101,132,Hypertension,Antihypertensive,Synthetic
+SYN0198,35,Female,169,96.8,33.9,30.8,Yes,No reported symptoms,Family history of heart disease,Current,High,115,84,OK,69,36.9,97,112,172,No diagnosis,No medication,Synthetic
+SYN0199,20,Female,156,54.2,22.3,24.8,Yes,Routine check-up,Smoking history,Former,Moderate,92,81,OK,65,37.3,97,81,153,No diagnosis,No medication,Synthetic
+SYN0200,72,Male,169,58.9,20.6,16.3,Yes,No reported symptoms,No history reported,Never,Moderate,127,91,OK,62,36.4,96,82,200,No diagnosis,No medication,Synthetic
+SYN0201,30,Female,146,97.1,45.6,30.7,Yes,Routine check-up,Previous respiratory illness,Former,High,121,82,OK,88,37.5,97,113,173,No diagnosis,No medication,Synthetic
+SYN0202,25,Female,157,83.6,33.9,27.1,Yes,Dizziness,Sedentary lifestyle,Former,Low,114,65,OK,73,37.0,97,91,227,Hypertension,Antihypertensive,Synthetic
+SYN0203,85,Female,154,83.1,35.0,28.7,Yes,No reported symptoms,Smoking history,Never,Low,137,85,OK,61,37.0,95,111,228,No diagnosis,No medication,Synthetic
+SYN0204,30,Female,150,73.4,32.6,24.8,Yes,Shortness of breath,Sedentary lifestyle,Never,Moderate,85,61,OK,50,37.2,95,108,186,Asthma,Inhaler,Synthetic
+SYN0205,83,Female,173,62.8,21.0,27.3,Yes,Dizziness,Sedentary lifestyle,Never,Moderate,130,83,OK,71,37.4,100,142,213,Hypertension,Antihypertensive,Synthetic
+SYN0206,71,Male,160,127.0,49.6,40.8,Yes,Dizziness,Previous respiratory illness,Never,Low,152,91,OK,69,36.6,96,135,201,Hypertension,Antihypertensive,Synthetic
+SYN0207,87,Male,156,87.7,36.0,32.3,Yes,Dizziness,Smoking history,Never,Low,139,97,OK,69,36.3,95,172,249,Hypertension,Antihypertensive,Synthetic
+SYN0208,72,Female,153,51.5,22.0,17.1,Yes,Routine check-up,Smoking history,Never,High,132,93,OK,58,37.4,99,121,233,No diagnosis,No medication,Synthetic
+SYN0209,61,Male,174,59.2,19.6,23.2,Yes,Fatigue,Family history of heart disease,Current,Moderate,105,71,OK,67,36.1,95,119,148,No diagnosis,No medication,Synthetic
+SYN0210,24,Female,156,99.7,41.0,33.4,Yes,Routine check-up,Sedentary lifestyle,Former,Moderate,126,94,OK,79,36.4,97,118,201,No diagnosis,No medication,Synthetic
+SYN0211,68,Female,151,85.1,37.3,28.8,Yes,Routine check-up,Sedentary lifestyle,Current,High,109,75,OK,68,36.9,98,88,159,No diagnosis,No medication,Synthetic
+SYN0212,62,Female,165,93.7,34.4,31.1,Yes,No reported symptoms,Smoking history,Never,Low,105,87,OK,91,37.1,100,127,160,Hypertension,Antihypertensive,Synthetic
+SYN0213,80,Male,177,75.1,24.0,25.9,Yes,No reported symptoms,Family history of heart disease,Never,Moderate,113,91,OK,97,37.7,97,127,244,Hypertension,Antihypertensive,Synthetic
+SYN0214,26,Female,157,53.7,21.8,16.8,Yes,No reported symptoms,No history reported,Never,Moderate,130,79,OK,86,37.3,98,60,246,No diagnosis,No medication,Synthetic
+SYN0215,18,Male,180,75.3,23.2,24.3,Yes,Wheezing,Smoking history,Never,Low,102,72,OK,82,36.6,99,79,188,Asthma,Inhaler,Synthetic
+SYN0216,78,Male,166,96.3,34.9,34.9,No,Fever,Previous respiratory illness,Former,Moderate,148,84,OK,72,36.3,92,137,196,Respiratory Infection,Supportive care,Synthetic
+SYN0217,38,Female,152,64.2,27.8,21.4,Yes,No reported symptoms,Family history of diabetes,Never,Moderate,90,68,OK,53,36.6,98,60,144,No diagnosis,No medication,Synthetic
+SYN0218,41,Female,159,66.6,26.3,24.5,Yes,Routine check-up,Previous respiratory illness,Never,Moderate,139,64,OK,88,37.1,96,77,218,No diagnosis,No medication,Synthetic
+SYN0219,75,Male,164,90.4,33.6,27.9,Yes,Fatigue,Smoking history,Former,Low,145,85,OK,74,36.4,97,60,232,No diagnosis,No medication,Synthetic
+SYN0220,30,Male,174,79.6,26.3,31.3,Yes,Routine check-up,Family history of diabetes,Never,Low,145,67,OK,68,37.6,96,74,219,No diagnosis,No medication,Synthetic
+SYN0221,22,Female,162,58.4,22.3,24.5,Yes,Fatigue,Smoking history,Former,Moderate,120,68,OK,112,36.5,96,182,189,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0222,30,Female,168,103.9,36.8,32.8,Yes,No reported symptoms,Sedentary lifestyle,Never,Low,127,96,OK,101,36.7,98,62,231,Hypertension,Antihypertensive,Synthetic
+SYN0223,42,Male,174,83.3,27.5,31.3,Yes,Fatigue,Family history of diabetes,Never,Moderate,104,78,OK,74,37.1,94,104,211,No diagnosis,No medication,Synthetic
+SYN0224,58,Male,170,90.1,31.2,30.0,Yes,Routine check-up,Family history of heart disease,Current,High,128,80,OK,75,36.9,100,99,216,No diagnosis,No medication,Synthetic
+SYN0225,53,Female,163,64.5,24.3,21.3,Yes,Increased thirst,No history reported,Current,Low,134,87,OK,73,36.8,96,134,184,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0226,40,Male,164,73.6,27.4,27.9,Yes,Headache,Family history of heart disease,Current,High,128,85,OK,81,36.9,95,113,198,Hypertension,Antihypertensive,Synthetic
+SYN0227,54,Male,166,85.7,31.1,23.8,Yes,Shortness of breath,Family history of diabetes,Never,Moderate,145,77,OK,90,36.9,97,114,160,Asthma,Inhaler,Synthetic
+SYN0228,35,Female,171,73.7,25.2,26.0,Yes,No reported symptoms,Sedentary lifestyle,Never,Moderate,120,92,OK,75,37.2,97,118,194,Hypertension,Antihypertensive,Synthetic
+SYN0229,20,Male,173,58.0,19.4,19.9,Yes,Routine check-up,Family history of heart disease,Never,Moderate,117,87,OK,59,37.1,99,81,209,No diagnosis,No medication,Synthetic
+SYN0230,51,Male,174,74.8,24.7,28.8,Yes,Routine check-up,Sedentary lifestyle,Never,Low,94,78,OK,71,37.3,98,110,186,No diagnosis,No medication,Synthetic
+SYN0231,82,Male,175,50.3,16.4,18.7,Yes,Fatigue,Sedentary lifestyle,Former,High,99,84,OK,67,36.7,100,108,197,No diagnosis,No medication,Synthetic
+SYN0232,62,Male,162,81.8,31.2,31.1,No,Fatigue,No history reported,Never,Moderate,95,87,OK,71,36.1,96,166,162,No diagnosis,No medication,Synthetic
+SYN0233,72,Male,182,45.4,13.7,19.5,Yes,No reported symptoms,Smoking history,Former,Moderate,100,85,OK,64,36.6,96,126,175,No diagnosis,No medication,Synthetic
+SYN0234,27,Male,155,68.5,28.5,23.9,Yes,No reported symptoms,Sedentary lifestyle,Never,Moderate,115,89,OK,98,36.6,98,68,223,No diagnosis,No medication,Synthetic
+SYN0235,50,Male,174,85.5,28.2,28.5,Yes,No reported symptoms,Sedentary lifestyle,Former,Moderate,99,89,OK,65,36.6,100,135,228,No diagnosis,No medication,Synthetic
+SYN0236,51,Male,164,78.0,29.0,31.7,Yes,No reported symptoms,Family history of diabetes,Former,Low,101,85,OK,98,36.6,98,73,206,No diagnosis,No medication,Synthetic
+SYN0237,88,Male,167,55.5,19.9,21.4,Yes,Routine check-up,Previous respiratory illness,Never,Moderate,130,85,OK,76,37.1,95,152,221,No diagnosis,No medication,Synthetic
+SYN0238,51,Female,153,81.1,34.6,27.7,Yes,No reported symptoms,Smoking history,Former,Low,92,75,OK,89,37.3,94,101,173,Hypertension,Antihypertensive,Synthetic
+SYN0239,67,Male,160,54.2,21.2,20.7,Yes,Fatigue,Family history of heart disease,Never,Low,130,59,OK,63,37.1,98,133,194,No diagnosis,No medication,Synthetic
+SYN0240,47,Female,156,77.9,32.0,25.4,Yes,Fatigue,No history reported,Former,Moderate,115,73,OK,89,36.6,97,60,227,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0241,25,Female,161,47.3,18.2,21.3,Yes,Fatigue,Sedentary lifestyle,Never,Moderate,114,83,OK,65,37.0,96,126,246,No diagnosis,No medication,Synthetic
+SYN0242,45,Female,165,88.2,32.4,35.6,Yes,Fatigue,Smoking history,Former,High,133,71,OK,64,36.8,95,111,280,No diagnosis,No medication,Synthetic
+SYN0243,22,Female,161,58.2,22.5,21.3,Yes,Fatigue,No history reported,Never,Moderate,115,73,OK,89,37.0,97,137,185,No diagnosis,No medication,Synthetic
+SYN0244,51,Male,150,93.0,41.3,30.0,Yes,No reported symptoms,Previous respiratory illness,Never,Moderate,135,66,OK,100,37.4,100,133,257,No diagnosis,No medication,Synthetic
+SYN0245,67,Male,156,45.7,18.8,16.1,Yes,Fever,Smoking history,Former,Moderate,132,53,OK,93,38.0,99,109,230,Respiratory Infection,Supportive care,Synthetic
+SYN0246,80,Female,145,56.4,26.8,18.4,Yes,Headache,Family history of diabetes,Never,Moderate,123,95,OK,84,37.4,96,132,210,Hypertension,Antihypertensive,Synthetic
+SYN0247,28,Male,164,83.6,31.1,29.7,Yes,Fatigue,Smoking history,Never,Moderate,85,75,OK,78,36.7,97,92,168,No diagnosis,No medication,Synthetic
+SYN0248,85,Male,157,68.5,27.8,24.9,Yes,No reported symptoms,Smoking history,Never,Moderate,119,97,OK,83,36.7,93,140,151,Hypertension,Antihypertensive,Synthetic
+SYN0249,89,Female,157,108.2,43.9,34.0,Yes,Headache,Family history of heart disease,Never,Moderate,107,100,OK,61,36.7,97,125,289,Hypertension,Antihypertensive,Synthetic
+SYN0250,85,Female,165,66.1,24.3,25.4,Yes,Headache,Previous respiratory illness,Never,Moderate,154,91,OK,98,37.5,96,100,254,Hypertension,Antihypertensive,Synthetic
+SYN0251,76,Other,164,115.0,42.8,36.8,Yes,No reported symptoms,Family history of heart disease,Never,Moderate,129,99,OK,85,36.6,95,90,222,Hypertension,Antihypertensive,Synthetic
+SYN0252,78,Male,166,99.2,36.0,34.7,Yes,Fatigue,Smoking history,Former,Moderate,132,92,OK,80,36.6,96,65,159,No diagnosis,No medication,Synthetic
+SYN0253,57,Other,153,74.1,31.7,23.9,Yes,Fatigue,Previous respiratory illness,Never,Moderate,116,83,OK,87,37.0,99,98,260,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0254,55,Male,175,69.2,22.6,22.0,Yes,Fatigue,Family history of diabetes,Current,Moderate,104,85,OK,79,37.1,97,77,189,No diagnosis,No medication,Synthetic
+SYN0255,56,Female,154,103.5,43.6,35.3,Yes,Routine check-up,Sedentary lifestyle,Never,Low,110,81,OK,57,36.7,97,120,216,No diagnosis,No medication,Synthetic
+SYN0256,59,Female,148,86.7,39.6,29.1,Yes,No reported symptoms,No history reported,Never,Moderate,123,76,OK,80,36.8,97,111,226,No diagnosis,No medication,Synthetic
+SYN0257,32,Male,176,70.6,22.8,23.6,Yes,Fatigue,Previous respiratory illness,Never,Moderate,142,71,OK,75,37.2,98,143,215,No diagnosis,No medication,Synthetic
+SYN0258,78,Female,157,74.4,30.2,26.3,Yes,Dizziness,No history reported,Never,High,132,95,OK,70,36.1,100,140,156,Hypertension,Antihypertensive,Synthetic
+SYN0259,32,Female,156,124.9,51.3,44.2,Yes,Dizziness,Previous respiratory illness,Current,Low,128,75,OK,65,36.9,96,60,154,Hypertension,Antihypertensive,Synthetic
+SYN0260,49,Male,157,49.5,20.1,20.6,Yes,No reported symptoms,Previous respiratory illness,Never,Low,109,54,OK,47,37.3,98,80,222,No diagnosis,No medication,Synthetic
+SYN0261,88,Male,142,96.4,47.8,32.2,Yes,Fatigue,Smoking history,Never,High,138,81,OK,61,36.4,96,133,207,No diagnosis,No medication,Synthetic
+SYN0262,88,Other,164,79.6,29.6,27.9,Yes,No reported symptoms,Smoking history,Never,High,134,89,OK,74,37.6,96,127,223,Hypertension,Antihypertensive,Synthetic
+SYN0263,72,Male,156,99.5,40.9,33.9,Yes,Routine check-up,Smoking history,Former,Moderate,125,73,OK,64,36.4,98,131,241,No diagnosis,No medication,Synthetic
+SYN0264,44,Male,163,63.9,24.1,23.2,Yes,No reported symptoms,Smoking history,Never,Low,95,74,OK,49,37.2,97,134,166,No diagnosis,No medication,Synthetic
+SYN0265,37,Female,140,71.7,36.6,30.4,Yes,Routine check-up,Family history of diabetes,Current,Moderate,104,72,OK,59,35.9,99,98,183,No diagnosis,No medication,Synthetic
+SYN0266,69,Female,147,100.6,46.6,32.5,Yes,Sore throat,Smoking history,Never,Moderate,149,89,OK,95,38.0,97,137,188,Respiratory Infection,Supportive care,Synthetic
+SYN0267,72,Female,162,79.6,30.3,26.6,Yes,Dizziness,Family history of heart disease,Never,Low,125,90,OK,83,36.8,95,110,227,Hypertension,Antihypertensive,Synthetic
+SYN0268,36,Male,152,73.4,31.8,27.7,Yes,Fatigue,Smoking history,Never,High,131,73,OK,57,37.3,94,90,201,No diagnosis,No medication,Synthetic
+SYN0269,47,Female,161,74.5,28.7,25.8,Yes,No reported symptoms,Family history of heart disease,Never,Low,120,65,OK,60,37.1,98,76,149,Hypertension,Antihypertensive,Synthetic
+SYN0270,55,Male,169,80.9,28.3,26.5,Yes,No reported symptoms,Smoking history,Never,High,120,91,OK,58,37.1,99,60,208,Hypertension,Antihypertensive,Synthetic
+SYN0271,61,Male,176,75.9,24.5,25.9,Yes,Fatigue,Smoking history,Current,High,124,74,OK,94,36.7,96,68,212,No diagnosis,No medication,Synthetic
+SYN0272,49,Male,152,83.8,36.3,28.8,Yes,Dizziness,Family history of diabetes,Never,Moderate,106,73,OK,81,36.3,100,92,192,Hypertension,Antihypertensive,Synthetic
+SYN0273,62,Female,145,67.2,32.0,24.9,Yes,Fatigue,Smoking history,Never,Low,133,93,OK,80,36.7,100,150,151,No diagnosis,No medication,Synthetic
+SYN0274,74,Male,156,55.8,22.9,22.4,Yes,Headache,Family history of heart disease,Never,High,149,100,OK,84,36.1,97,141,207,Hypertension,Antihypertensive,Synthetic
+SYN0275,48,Female,163,67.0,25.2,23.3,Yes,No reported symptoms,Sedentary lifestyle,Never,Moderate,109,65,OK,85,36.5,99,77,240,No diagnosis,No medication,Synthetic
+SYN0276,66,Male,180,71.4,22.0,25.3,Yes,Dizziness,Family history of heart disease,Never,Moderate,123,85,OK,80,37.5,98,87,214,Hypertension,Antihypertensive,Synthetic
+SYN0277,52,Male,177,70.7,22.6,21.7,Yes,Fatigue,Previous respiratory illness,Former,High,148,71,OK,63,36.7,99,76,196,No diagnosis,No medication,Synthetic
+SYN0278,39,Male,179,100.6,31.4,32.8,Yes,Routine check-up,No history reported,Current,Low,137,69,OK,83,37.0,96,88,196,No diagnosis,No medication,Synthetic
+SYN0279,22,Male,162,90.0,34.3,33.2,Yes,Headache,No history reported,Never,High,126,72,OK,76,37.3,97,90,199,Hypertension,Antihypertensive,Synthetic
+SYN0280,51,Female,179,75.4,23.5,26.6,Yes,Cough,Family history of heart disease,Never,Moderate,133,62,OK,66,36.9,95,131,217,Asthma,Inhaler,Synthetic
+SYN0281,33,Male,169,48.9,17.1,16.0,Yes,Fever,Family history of diabetes,Never,Low,138,85,OK,76,36.8,92,66,180,Respiratory Infection,Supportive care,Synthetic
+SYN0282,20,Male,190,61.3,17.0,22.6,Yes,Wheezing,No history reported,Current,Low,127,69,OK,75,37.1,99,69,229,Asthma,Inhaler,Synthetic
+SYN0283,56,Male,158,83.3,33.4,32.3,Yes,No reported symptoms,Sedentary lifestyle,Never,Moderate,119,74,OK,92,36.9,99,96,166,No diagnosis,No medication,Synthetic
+SYN0284,45,Male,162,61.0,23.2,21.9,Yes,Fatigue,No history reported,Never,Low,116,79,OK,88,36.9,96,93,128,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0285,52,Male,158,50.7,20.3,20.4,No,No reported symptoms,Smoking history,Former,Low,110,87,OK,86,36.4,100,138,206,No diagnosis,No medication,Synthetic
+SYN0286,56,Male,164,105.0,39.0,33.4,Yes,No reported symptoms,Previous respiratory illness,Never,Low,140,78,OK,87,36.5,97,77,221,No diagnosis,No medication,Synthetic
+SYN0287,27,Male,178,89.2,28.2,32.1,Yes,Routine check-up,Family history of diabetes,Never,Moderate,136,66,OK,102,37.1,95,97,186,No diagnosis,No medication,Synthetic
+SYN0288,78,Female,168,56.8,20.1,20.5,Yes,Routine check-up,No history reported,Former,Moderate,119,71,OK,88,36.5,99,114,204,No diagnosis,No medication,Synthetic
+SYN0289,57,Female,158,77.8,31.2,28.6,Yes,Routine check-up,No history reported,Current,Moderate,137,70,OK,67,37.4,95,84,143,No diagnosis,No medication,Synthetic
+SYN0290,53,Male,173,49.2,16.4,17.7,Yes,Dizziness,Previous respiratory illness,Former,High,135,103,OK,79,36.1,96,104,149,Hypertension,Antihypertensive,Synthetic
+SYN0291,43,Male,176,92.4,29.8,31.7,Yes,Dizziness,Family history of diabetes,Former,High,131,98,OK,86,36.9,100,126,180,Hypertension,Antihypertensive,Synthetic
+SYN0292,76,Female,146,63.2,29.6,22.0,Yes,No reported symptoms,Family history of diabetes,Former,High,117,63,OK,91,36.5,96,68,228,No diagnosis,No medication,Synthetic
+SYN0293,19,Female,158,55.1,22.1,21.5,Yes,No reported symptoms,Previous respiratory illness,Never,Moderate,149,69,OK,75,36.2,98,76,209,No diagnosis,No medication,Synthetic
+SYN0294,90,Male,154,74.5,31.4,24.6,Yes,Headache,Previous respiratory illness,Current,High,166,71,OK,85,37.4,98,60,189,Hypertension,Antihypertensive,Synthetic
+SYN0295,77,Male,169,59.2,20.7,21.8,Yes,Fatigue,Smoking history,Current,Moderate,104,83,OK,74,36.3,95,156,138,No diagnosis,No medication,Synthetic
+SYN0296,66,Male,168,71.9,25.5,25.0,Yes,No reported symptoms,Sedentary lifestyle,Never,Moderate,139,88,OK,82,36.7,96,68,198,No diagnosis,No medication,Synthetic
+SYN0297,85,Male,150,104.3,46.4,31.8,Yes,No reported symptoms,Smoking history,Never,High,170,73,OK,96,36.7,96,133,271,Hypertension,Antihypertensive,Synthetic
+SYN0298,25,Female,161,83.8,32.3,26.5,Yes,No reported symptoms,Family history of diabetes,Never,Moderate,122,82,OK,83,36.8,95,121,223,Hypertension,Antihypertensive,Synthetic
+SYN0299,18,Female,165,61.4,22.6,24.7,Yes,Headache,Sedentary lifestyle,Never,Moderate,126,81,OK,83,37.1,98,118,129,Hypertension,Antihypertensive,Synthetic
+SYN0300,37,Female,193,83.3,22.4,30.9,Yes,Fatigue,Previous respiratory illness,Never,Moderate,106,84,OK,72,36.3,97,60,134,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0301,20,Male,170,64.5,22.3,26.1,Yes,Cough,Family history of diabetes,Never,Moderate,123,79,OK,74,37.0,99,147,175,Asthma,Inhaler,Synthetic
+SYN0302,50,Female,169,73.6,25.8,24.0,Yes,Routine check-up,No history reported,Never,High,115,74,OK,67,36.8,99,132,192,No diagnosis,No medication,Synthetic
+SYN0303,52,Male,169,74.1,25.9,29.2,Yes,Fatigue,Sedentary lifestyle,Never,Moderate,145,71,OK,56,36.9,94,136,196,No diagnosis,No medication,Synthetic
+SYN0304,43,Male,171,60.7,20.8,22.2,Yes,No reported symptoms,Smoking history,Never,Moderate,132,80,OK,84,37.1,98,95,225,Hypertension,Antihypertensive,Synthetic
+SYN0305,62,Male,170,69.4,24.0,22.9,Yes,Fatigue,Previous respiratory illness,Never,Moderate,109,63,OK,45,36.5,94,101,255,No diagnosis,No medication,Synthetic
+SYN0306,74,Male,167,99.8,35.8,37.3,Yes,Dizziness,No history reported,Current,Low,155,97,OK,74,36.9,99,164,220,Hypertension,Antihypertensive,Synthetic
+SYN0307,39,Female,143,60.6,29.6,18.7,Yes,No reported symptoms,Family history of diabetes,Never,Low,113,73,OK,104,36.6,97,64,168,No diagnosis,No medication,Synthetic
+SYN0308,46,Male,187,54.5,15.6,21.5,Yes,Routine check-up,Family history of diabetes,Never,High,137,71,OK,62,37.0,99,86,202,No diagnosis,No medication,Synthetic
+SYN0309,66,Male,160,69.6,27.2,23.8,Yes,Fatigue,Sedentary lifestyle,Never,Moderate,107,63,OK,66,36.8,99,90,205,No diagnosis,No medication,Synthetic
+SYN0310,61,Male,157,79.1,32.1,25.7,Yes,Fatigue,Sedentary lifestyle,Current,Moderate,130,82,OK,79,37.6,98,119,179,No diagnosis,No medication,Synthetic
+SYN0311,74,Male,188,57.9,16.4,21.1,Yes,Dizziness,No history reported,Former,Moderate,162,84,OK,79,36.3,99,120,224,Hypertension,Antihypertensive,Synthetic
+SYN0312,24,Male,183,85.2,25.4,27.7,Yes,No reported symptoms,Sedentary lifestyle,Never,Moderate,121,74,OK,59,36.7,98,86,273,No diagnosis,No medication,Synthetic
+SYN0313,79,Female,158,57.5,23.0,23.2,Yes,No reported symptoms,Family history of diabetes,Never,Moderate,135,105,OK,83,36.9,98,122,262,Hypertension,Antihypertensive,Synthetic
+SYN0314,75,Male,169,96.4,33.8,31.4,Yes,Dizziness,No history reported,Never,Low,136,98,OK,74,37.1,97,143,183,Hypertension,Antihypertensive,Synthetic
+SYN0315,47,Male,166,93.4,33.9,36.8,Yes,Frequent urination,No history reported,Former,Moderate,105,73,OK,80,36.6,99,100,200,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0316,75,Female,144,68.1,32.8,30.5,Yes,Increased thirst,Family history of diabetes,Never,Moderate,133,65,OK,89,36.8,96,139,156,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0317,86,Female,155,73.0,30.4,26.9,Yes,Dizziness,No history reported,Current,Moderate,151,84,OK,71,36.4,96,102,222,Hypertension,Antihypertensive,Synthetic
+SYN0318,61,Male,169,87.3,30.6,27.7,Yes,Routine check-up,Family history of heart disease,Former,Low,134,67,OK,88,36.2,97,127,217,No diagnosis,No medication,Synthetic
+SYN0319,51,Female,158,54.8,22.0,22.5,Yes,Dizziness,Sedentary lifestyle,Never,High,130,83,OK,82,36.6,96,120,163,Hypertension,Antihypertensive,Synthetic
+SYN0320,72,Female,165,84.2,30.9,30.7,Yes,No reported symptoms,Family history of diabetes,Never,Moderate,173,95,OK,80,36.8,100,63,277,Hypertension,Antihypertensive,Synthetic
+SYN0321,41,Male,166,61.7,22.4,26.0,Yes,Wheezing,Smoking history,Former,Low,144,87,OK,63,36.9,98,89,162,Asthma,Inhaler,Synthetic
+SYN0322,48,Male,161,95.3,36.8,32.7,Yes,No reported symptoms,Previous respiratory illness,Never,High,121,96,OK,56,36.1,97,73,232,Hypertension,Antihypertensive,Synthetic
+SYN0323,45,Female,153,76.6,32.7,25.0,Yes,Dizziness,Family history of diabetes,Current,Moderate,140,67,OK,68,36.7,96,60,176,Hypertension,Antihypertensive,Synthetic
+SYN0324,31,Female,143,59.0,28.9,20.4,Yes,Fatigue,No history reported,Never,Low,110,70,OK,61,36.7,100,100,211,No diagnosis,No medication,Synthetic
+SYN0325,73,Male,171,81.5,27.9,31.0,Yes,Headache,Smoking history,Current,Low,134,95,OK,68,36.5,96,88,220,Hypertension,Antihypertensive,Synthetic
+SYN0326,77,Female,168,78.3,27.7,25.3,Yes,No reported symptoms,Smoking history,Former,High,98,88,OK,87,37.1,95,105,149,No diagnosis,No medication,Synthetic
+SYN0327,81,Male,162,77.6,29.6,30.3,Yes,Headache,No history reported,Former,Moderate,132,74,OK,73,37.1,97,85,171,Hypertension,Antihypertensive,Synthetic
+SYN0328,50,Male,164,75.9,28.2,35.0,Yes,Routine check-up,Smoking history,Never,Moderate,122,83,OK,80,36.8,100,160,201,No diagnosis,No medication,Synthetic
+SYN0329,35,Female,160,75.5,29.5,25.7,Yes,No reported symptoms,Family history of heart disease,Current,Moderate,88,83,OK,56,36.7,99,91,169,Hypertension,Antihypertensive,Synthetic
+SYN0330,66,Male,170,81.0,28.0,31.2,Yes,Dizziness,Family history of diabetes,Never,Low,114,86,OK,81,37.1,98,89,194,Hypertension,Antihypertensive,Synthetic
+SYN0331,57,Male,171,85.7,29.3,27.8,Yes,Headache,Family history of diabetes,Current,Low,142,104,OK,70,37.0,95,95,241,Hypertension,Antihypertensive,Synthetic
+SYN0332,63,Female,148,65.4,29.9,27.5,Yes,No reported symptoms,Sedentary lifestyle,Never,Moderate,163,87,OK,70,36.8,96,107,184,Hypertension,Antihypertensive,Synthetic
+SYN0333,87,Female,150,62.1,27.6,21.9,Yes,No reported symptoms,Previous respiratory illness,Never,Moderate,109,84,OK,81,36.2,96,92,163,No diagnosis,No medication,Synthetic
+SYN0334,54,Male,172,94.5,31.9,32.9,Yes,No reported symptoms,Smoking history,Never,High,174,74,OK,68,37.3,95,77,250,Hypertension,Antihypertensive,Synthetic
+SYN0335,49,Male,151,73.3,32.1,27.7,Yes,Routine check-up,Sedentary lifestyle,Never,High,138,81,OK,81,35.9,97,91,163,No diagnosis,No medication,Synthetic
+SYN0336,62,Female,148,55.7,25.4,21.0,Yes,No reported symptoms,No history reported,Never,High,100,79,OK,80,37.1,95,79,169,No diagnosis,No medication,Synthetic
+SYN0337,49,Male,180,70.0,21.6,22.7,Yes,Fatigue,No history reported,Never,Low,125,77,OK,47,36.2,98,118,178,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0338,32,Male,162,94.1,35.9,29.6,Yes,Fatigue,Sedentary lifestyle,Former,Moderate,97,86,OK,60,37.0,96,97,222,No diagnosis,No medication,Synthetic
+SYN0339,28,Female,166,52.8,19.2,19.8,Yes,Routine check-up,Family history of diabetes,Never,Low,121,49,OK,70,37.3,98,109,199,No diagnosis,No medication,Synthetic
+SYN0340,83,Male,167,85.0,30.5,30.7,Yes,Fatigue,Family history of heart disease,Former,Moderate,130,72,OK,84,37.9,99,89,179,No diagnosis,No medication,Synthetic
+SYN0341,45,Male,171,75.2,25.7,27.4,Yes,Headache,Family history of heart disease,Former,Moderate,154,70,OK,87,37.3,94,65,205,Hypertension,Antihypertensive,Synthetic
+SYN0342,18,Female,161,50.5,19.5,17.5,Yes,Routine check-up,Smoking history,Current,Low,113,75,OK,81,36.8,96,65,176,No diagnosis,No medication,Synthetic
+SYN0343,20,Male,182,80.9,24.4,28.0,Yes,Dizziness,Sedentary lifestyle,Never,High,107,68,OK,68,36.9,96,99,211,Hypertension,Antihypertensive,Synthetic
+SYN0344,38,Male,168,49.5,17.5,17.8,Yes,No reported symptoms,Family history of heart disease,Never,Moderate,110,88,OK,66,36.8,97,117,211,No diagnosis,No medication,Synthetic
+SYN0345,59,Male,171,109.5,37.4,39.0,Yes,Dizziness,Family history of heart disease,Never,Low,166,62,OK,64,37.0,99,112,122,Hypertension,Antihypertensive,Synthetic
+SYN0346,25,Female,155,84.7,35.3,26.8,Yes,No reported symptoms,No history reported,Never,Low,140,93,OK,89,36.2,96,152,100,No diagnosis,No medication,Synthetic
+SYN0347,63,Male,169,68.1,23.8,24.8,Yes,Frequent urination,Smoking history,Former,Low,126,74,OK,70,36.5,97,116,220,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0348,64,Male,168,43.3,15.3,17.1,Yes,Cough,Sedentary lifestyle,Current,Moderate,137,85,OK,89,36.1,97,76,197,Asthma,Inhaler,Synthetic
+SYN0349,34,Female,164,67.9,25.2,25.4,Yes,No reported symptoms,Family history of diabetes,Never,Moderate,96,83,OK,80,35.8,97,60,239,No diagnosis,No medication,Synthetic
+SYN0350,25,Male,166,64.1,23.3,28.3,Yes,Shortness of breath,Family history of diabetes,Former,Low,128,76,OK,76,36.8,94,103,186,Asthma,Inhaler,Synthetic
+SYN0351,23,Female,154,92.8,39.1,34.2,Yes,Cough,Previous respiratory illness,Never,Low,146,88,OK,66,35.9,94,99,145,Asthma,Inhaler,Synthetic
+SYN0352,44,Female,163,92.5,34.8,32.1,Yes,Shortness of breath,Smoking history,Current,Low,124,67,OK,67,37.1,96,103,225,Asthma,Inhaler,Synthetic
+SYN0353,48,Male,181,93.5,28.5,31.0,Yes,No reported symptoms,Smoking history,Former,Moderate,101,85,OK,89,36.9,95,60,236,Hypertension,Antihypertensive,Synthetic
+SYN0354,55,Female,158,97.9,39.2,34.7,Yes,Routine check-up,Sedentary lifestyle,Current,Moderate,135,85,OK,56,36.7,96,90,230,No diagnosis,No medication,Synthetic
+SYN0355,85,Female,168,118.9,42.1,36.9,Yes,Cough,No history reported,Never,Moderate,141,92,OK,75,36.5,97,114,178,Asthma,Inhaler,Synthetic
+SYN0356,46,Female,145,83.8,39.9,27.2,Yes,Headache,No history reported,Never,Low,125,82,OK,67,36.7,98,75,178,Hypertension,Antihypertensive,Synthetic
+SYN0357,31,Male,160,78.1,30.5,29.4,Yes,Routine check-up,Previous respiratory illness,Never,Moderate,149,88,OK,79,36.8,98,69,179,No diagnosis,No medication,Synthetic
+SYN0358,69,Female,163,40.4,15.2,16.3,Yes,Routine check-up,Smoking history,Never,Moderate,130,93,OK,79,37.8,97,119,196,No diagnosis,No medication,Synthetic
+SYN0359,28,Male,172,71.6,24.2,26.1,Yes,Routine check-up,No history reported,Never,Low,122,77,OK,86,36.3,95,126,212,No diagnosis,No medication,Synthetic
+SYN0360,52,Female,167,106.1,38.0,36.4,Yes,Routine check-up,Smoking history,Never,Low,143,88,OK,87,36.6,97,134,123,No diagnosis,No medication,Synthetic
+SYN0361,28,Female,167,91.3,32.7,31.4,Yes,Shortness of breath,Sedentary lifestyle,Never,Low,120,92,OK,88,36.8,96,91,182,Asthma,Inhaler,Synthetic
+SYN0362,58,Male,173,63.2,21.1,23.9,Yes,Increased thirst,Sedentary lifestyle,Current,Moderate,126,67,OK,82,36.7,99,117,210,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0363,55,Female,149,59.4,26.8,20.0,Yes,Dizziness,Sedentary lifestyle,Never,Low,152,68,OK,82,36.3,96,86,193,Hypertension,Antihypertensive,Synthetic
+SYN0364,76,Female,155,64.6,26.9,24.3,Yes,No reported symptoms,Family history of diabetes,Never,Moderate,139,76,OK,67,36.7,99,125,156,No diagnosis,No medication,Synthetic
+SYN0365,47,Male,167,66.3,23.8,22.3,Yes,Routine check-up,No history reported,Current,Moderate,122,79,OK,64,36.7,96,69,202,No diagnosis,No medication,Synthetic
+SYN0366,73,Male,166,45.4,16.5,16.0,Yes,No reported symptoms,Previous respiratory illness,Never,Moderate,134,94,OK,70,36.2,98,102,163,Hypertension,Antihypertensive,Synthetic
+SYN0367,19,Female,155,77.2,32.1,27.1,Yes,Fatigue,No history reported,Current,High,125,65,OK,63,36.8,99,95,213,No diagnosis,No medication,Synthetic
+SYN0368,79,Male,172,66.7,22.5,26.3,Yes,Routine check-up,No history reported,Never,Low,122,78,OK,96,36.6,100,125,199,No diagnosis,No medication,Synthetic
+SYN0369,27,Male,166,65.9,23.9,24.0,No,Fatigue,Previous respiratory illness,Current,Moderate,138,68,OK,71,36.3,97,60,187,No diagnosis,No medication,Synthetic
+SYN0370,63,Male,162,83.0,31.6,29.2,Yes,Routine check-up,Family history of diabetes,Former,Moderate,141,66,OK,79,36.4,98,140,179,No diagnosis,No medication,Synthetic
+SYN0371,66,Female,160,87.4,34.1,29.6,Yes,Dizziness,Sedentary lifestyle,Never,High,148,101,OK,74,36.3,98,106,216,Hypertension,Antihypertensive,Synthetic
+SYN0372,33,Female,152,69.7,30.2,27.5,Yes,Fatigue,No history reported,Current,Low,120,64,OK,75,36.8,96,84,100,No diagnosis,No medication,Synthetic
+SYN0373,55,Female,161,70.9,27.4,23.0,Yes,Fatigue,Family history of heart disease,Former,Low,116,79,OK,77,36.9,100,82,228,No diagnosis,No medication,Synthetic
+SYN0374,22,Male,174,75.2,24.8,29.9,Yes,No reported symptoms,Family history of diabetes,Former,Moderate,133,95,OK,98,37.9,98,118,224,Hypertension,Antihypertensive,Synthetic
+SYN0375,78,Female,162,64.1,24.4,22.0,Yes,No reported symptoms,Sedentary lifestyle,Former,Moderate,138,93,OK,80,36.7,98,78,191,No diagnosis,No medication,Synthetic
+SYN0376,55,Male,163,77.6,29.2,32.2,Yes,Routine check-up,Sedentary lifestyle,Former,Moderate,122,88,OK,95,36.7,98,134,169,No diagnosis,No medication,Synthetic
+SYN0377,74,Female,150,69.0,30.7,25.8,Yes,Dizziness,Sedentary lifestyle,Never,Moderate,106,63,OK,77,37.0,95,89,244,Hypertension,Antihypertensive,Synthetic
+SYN0378,25,Male,158,98.1,39.3,35.8,Yes,Dizziness,Previous respiratory illness,Never,Moderate,97,78,OK,88,36.6,96,86,146,Hypertension,Antihypertensive,Synthetic
+SYN0379,39,Male,179,73.0,22.8,24.6,Yes,Routine check-up,No history reported,Never,Moderate,147,69,OK,67,36.7,95,89,206,No diagnosis,No medication,Synthetic
+SYN0380,33,Male,161,100.4,38.7,37.5,Yes,Routine check-up,No history reported,Never,High,106,78,OK,105,36.5,100,88,192,No diagnosis,No medication,Synthetic
+SYN0381,58,Female,145,51.8,24.6,16.0,Yes,Headache,No history reported,Never,Moderate,144,90,OK,57,36.2,93,88,166,Hypertension,Antihypertensive,Synthetic
+SYN0382,36,Female,164,82.5,30.7,31.0,Yes,Dizziness,Previous respiratory illness,Current,Moderate,105,96,OK,72,37.1,97,60,198,Hypertension,Antihypertensive,Synthetic
+SYN0383,18,Male,183,69.6,20.8,21.3,Yes,Routine check-up,Family history of heart disease,Former,High,111,83,OK,74,36.1,100,60,204,No diagnosis,No medication,Synthetic
+SYN0384,87,Male,166,56.9,20.6,19.6,Yes,No reported symptoms,Family history of heart disease,Never,Moderate,139,70,OK,84,36.9,98,164,167,No diagnosis,No medication,Synthetic
+SYN0385,42,Female,169,118.5,41.5,40.4,Yes,No reported symptoms,Family history of diabetes,Never,Moderate,115,83,OK,59,36.8,96,110,190,No diagnosis,No medication,Synthetic
+SYN0386,77,Female,163,70.8,26.6,27.3,Yes,Shortness of breath,No history reported,Former,Low,145,72,OK,102,36.6,95,138,182,Asthma,Inhaler,Synthetic
+SYN0387,90,Female,157,88.0,35.7,29.5,Yes,Dizziness,Family history of diabetes,Never,Low,114,113,OK,71,37.2,97,140,251,Hypertension,Antihypertensive,Synthetic
+SYN0388,43,Female,155,69.2,28.8,24.2,Yes,No reported symptoms,Smoking history,Never,Low,114,81,OK,61,36.6,97,60,182,No diagnosis,No medication,Synthetic
+SYN0389,61,Other,163,77.4,29.1,27.1,Yes,Headache,Sedentary lifestyle,Never,High,127,69,OK,69,36.8,95,67,231,Hypertension,Antihypertensive,Synthetic
+SYN0390,64,Male,184,81.3,24.0,28.5,Yes,Frequent urination,Smoking history,Never,High,145,56,OK,74,36.7,98,180,167,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0391,49,Female,178,83.4,26.3,28.6,Yes,Cough,No history reported,Former,Moderate,127,87,OK,81,36.6,97,127,252,Asthma,Inhaler,Synthetic
+SYN0392,83,Female,153,65.6,28.0,28.3,Yes,Routine check-up,Sedentary lifestyle,Former,Low,118,75,OK,69,36.9,98,132,244,No diagnosis,No medication,Synthetic
+SYN0393,24,Male,160,84.7,33.1,29.6,Yes,Dizziness,Smoking history,Never,Moderate,154,80,OK,92,37.0,97,75,190,Hypertension,Antihypertensive,Synthetic
+SYN0394,72,Male,148,103.9,47.4,32.4,Yes,No reported symptoms,Sedentary lifestyle,Never,Moderate,133,72,OK,70,37.5,98,128,165,No diagnosis,No medication,Synthetic
+SYN0395,28,Female,153,93.4,39.9,35.7,Yes,No reported symptoms,Sedentary lifestyle,Never,Moderate,112,67,OK,96,36.5,98,104,162,No diagnosis,No medication,Synthetic
+SYN0396,77,Male,176,53.2,17.2,20.7,Yes,Headache,Smoking history,Never,Low,162,80,OK,86,36.4,95,132,165,Hypertension,Antihypertensive,Synthetic
+SYN0397,43,Female,148,70.9,32.4,23.6,Yes,No reported symptoms,Sedentary lifestyle,Former,Moderate,146,87,OK,53,36.9,97,140,189,No diagnosis,No medication,Synthetic
+SYN0398,44,Other,161,75.9,29.3,24.1,Yes,Wheezing,No history reported,Never,Low,138,65,OK,75,37.3,98,101,119,Asthma,Inhaler,Synthetic
+SYN0399,33,Male,185,67.5,19.7,21.7,Yes,No reported symptoms,Family history of diabetes,Never,Moderate,125,76,OK,90,36.7,97,62,163,Hypertension,Antihypertensive,Synthetic
+SYN0400,31,Male,168,60.1,21.3,20.9,Yes,Routine check-up,Smoking history,Never,Low,118,62,OK,73,37.5,98,79,266,No diagnosis,No medication,Synthetic
+SYN0401,87,Male,174,84.4,27.9,29.8,Yes,No reported symptoms,Sedentary lifestyle,Never,Moderate,145,79,OK,68,36.8,96,98,176,No diagnosis,No medication,Synthetic
+SYN0402,35,Male,159,64.5,25.5,25.7,Yes,Fatigue,No history reported,Never,Low,129,68,OK,66,36.3,100,140,168,No diagnosis,No medication,Synthetic
+SYN0403,43,Male,157,58.5,23.7,23.9,Yes,Fatigue,Smoking history,Never,Low,115,78,OK,72,36.7,96,63,215,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0404,61,Male,167,98.0,35.1,34.7,Yes,Fatigue,Sedentary lifestyle,Current,Moderate,137,68,OK,77,36.8,95,154,169,No diagnosis,No medication,Synthetic
+SYN0405,37,Male,179,71.0,22.2,21.2,Yes,Fatigue,Smoking history,Current,Moderate,98,70,OK,95,37.0,98,134,163,No diagnosis,No medication,Synthetic
+SYN0406,28,Female,153,95.0,40.6,32.9,Yes,Fatigue,Sedentary lifestyle,Former,Moderate,109,67,OK,85,36.5,99,134,188,No diagnosis,No medication,Synthetic
+SYN0407,82,Male,169,81.4,28.5,30.3,Yes,Routine check-up,Smoking history,Never,High,122,66,OK,70,35.9,96,144,191,No diagnosis,No medication,Synthetic
+SYN0408,66,Male,168,74.9,26.5,31.4,Yes,Headache,Sedentary lifestyle,Never,High,132,102,OK,76,36.3,97,147,176,Hypertension,Antihypertensive,Synthetic
+SYN0409,39,Female,152,80.4,34.8,30.8,Yes,No reported symptoms,Family history of diabetes,Former,Low,159,77,OK,91,36.2,100,147,226,Hypertension,Antihypertensive,Synthetic
+SYN0410,81,Male,179,53.2,16.6,20.8,Yes,No reported symptoms,Previous respiratory illness,Never,High,123,74,OK,88,36.9,96,66,168,No diagnosis,No medication,Synthetic
+SYN0411,48,Male,162,68.8,26.2,25.4,Yes,Fatigue,Previous respiratory illness,Former,High,124,65,OK,81,37.5,97,108,190,No diagnosis,No medication,Synthetic
+SYN0412,52,Male,177,87.4,27.9,33.4,Yes,No reported symptoms,No history reported,Former,Moderate,123,78,OK,95,36.4,95,146,218,No diagnosis,No medication,Synthetic
+SYN0413,53,Female,150,64.4,28.6,25.3,Yes,Cough,Previous respiratory illness,Never,Low,129,88,OK,81,37.4,95,98,161,Asthma,Inhaler,Synthetic
+SYN0414,82,Female,163,60.5,22.8,23.0,Yes,Dizziness,Sedentary lifestyle,Current,High,151,76,OK,62,36.9,95,114,247,Hypertension,Antihypertensive,Synthetic
+SYN0415,44,Male,170,87.9,30.4,30.6,Yes,No reported symptoms,No history reported,Never,Low,125,78,OK,61,37.7,94,79,255,No diagnosis,No medication,Synthetic
+SYN0416,55,Other,156,72.6,29.8,27.6,Yes,No reported symptoms,No history reported,Never,Moderate,123,91,OK,75,37.3,95,97,145,No diagnosis,No medication,Synthetic
+SYN0417,59,Male,166,85.4,31.0,34.7,Yes,Frequent urination,Family history of heart disease,Never,Moderate,114,70,OK,61,35.8,99,127,161,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0418,71,Female,176,61.0,19.7,22.1,Yes,Dizziness,Family history of heart disease,Former,Low,95,95,Review: diastolic >= systolic,65,36.9,98,83,222,Hypertension,Antihypertensive,Synthetic
+SYN0419,61,Other,166,85.9,31.2,29.3,Yes,No reported symptoms,Sedentary lifestyle,Never,High,109,68,OK,73,36.7,99,74,255,No diagnosis,No medication,Synthetic
+SYN0420,39,Female,155,49.2,20.5,16.8,Yes,Dizziness,Family history of diabetes,Current,Low,157,70,OK,82,37.3,97,121,145,Hypertension,Antihypertensive,Synthetic
+SYN0421,46,Female,158,65.8,26.4,25.0,Yes,Wheezing,Sedentary lifestyle,Never,Low,87,88,Review: diastolic >= systolic,64,37.4,97,121,171,Asthma,Inhaler,Synthetic
+SYN0422,46,Male,178,56.3,17.8,21.7,Yes,Fatigue,Family history of heart disease,Former,Low,130,71,OK,87,36.6,97,145,209,No diagnosis,No medication,Synthetic
+SYN0423,73,Female,166,104.9,38.1,37.0,Yes,Dizziness,Previous respiratory illness,Current,High,150,88,OK,68,36.6,97,164,229,Hypertension,Antihypertensive,Synthetic
+SYN0424,90,Female,154,106.3,44.8,37.4,Yes,Headache,Previous respiratory illness,Former,Low,150,66,OK,59,36.4,96,100,203,Hypertension,Antihypertensive,Synthetic
+SYN0425,41,Female,168,60.4,21.4,21.4,No,Frequent urination,No history reported,Never,Low,143,78,OK,82,36.9,95,121,149,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0426,31,Female,153,65.8,28.1,21.6,Yes,Headache,Smoking history,Current,Moderate,147,70,OK,91,37.0,99,140,235,Hypertension,Antihypertensive,Synthetic
+SYN0427,54,Male,173,74.6,24.9,27.9,Yes,Dizziness,Sedentary lifestyle,Never,Moderate,120,58,OK,82,37.3,95,69,161,Hypertension,Antihypertensive,Synthetic
+SYN0428,57,Male,166,87.8,31.9,26.7,Yes,Dizziness,Smoking history,Never,Moderate,114,86,OK,74,36.5,96,96,230,Hypertension,Antihypertensive,Synthetic
+SYN0429,87,Female,168,94.3,33.4,28.4,Yes,No reported symptoms,Family history of heart disease,Never,Low,151,75,OK,86,36.8,97,177,202,Hypertension,Antihypertensive,Synthetic
+SYN0430,33,Male,184,80.6,23.8,25.9,Yes,Dizziness,Family history of heart disease,Never,Moderate,113,68,OK,92,37.2,98,82,155,Hypertension,Antihypertensive,Synthetic
+SYN0431,88,Female,146,98.7,46.3,31.5,Yes,No reported symptoms,Sedentary lifestyle,Never,Moderate,106,88,OK,82,36.5,95,144,193,No diagnosis,No medication,Synthetic
+SYN0432,40,Female,146,65.1,30.5,23.7,Yes,Increased thirst,No history reported,Former,Moderate,97,75,OK,84,35.5,95,91,139,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0433,86,Female,165,90.4,33.2,25.9,Yes,Fatigue,Family history of heart disease,Never,Low,138,57,OK,68,36.7,98,151,259,No diagnosis,No medication,Synthetic
+SYN0434,29,Other,151,40.6,17.8,16.8,Yes,Shortness of breath,No history reported,Never,Moderate,100,74,OK,93,36.1,96,102,157,Asthma,Inhaler,Synthetic
+SYN0435,24,Female,161,54.0,20.8,17.9,Yes,Fatigue,Previous respiratory illness,Former,Moderate,115,85,OK,81,36.9,100,120,165,No diagnosis,No medication,Synthetic
+SYN0436,75,Male,172,62.2,21.0,27.2,Yes,Shortness of breath,Family history of heart disease,Never,Moderate,105,87,OK,74,36.1,97,154,264,Asthma,Inhaler,Synthetic
+SYN0437,43,Male,169,67.5,23.6,21.2,Yes,Fatigue,Previous respiratory illness,Former,Moderate,129,84,OK,60,36.8,97,65,213,No diagnosis,No medication,Synthetic
+SYN0438,80,Female,148,76.5,34.9,25.2,Yes,Fatigue,Previous respiratory illness,Never,High,124,79,OK,68,36.7,94,118,243,No diagnosis,No medication,Synthetic
+SYN0439,49,Male,163,53.0,19.9,19.2,Yes,No reported symptoms,Smoking history,Current,Moderate,137,73,OK,67,37.2,98,64,184,No diagnosis,No medication,Synthetic
+SYN0440,51,Female,161,80.7,31.1,26.7,Yes,Routine check-up,No history reported,Never,High,134,88,OK,91,37.1,100,70,171,No diagnosis,No medication,Synthetic
+SYN0441,80,Other,165,50.2,18.4,18.5,No,Routine check-up,Smoking history,Never,Low,104,71,OK,64,37.2,98,97,197,No diagnosis,No medication,Synthetic
+SYN0442,66,Male,145,89.5,42.6,27.8,Yes,Fatigue,No history reported,Never,Low,133,89,OK,65,36.2,97,117,210,No diagnosis,No medication,Synthetic
+SYN0443,58,Female,172,88.2,29.8,30.0,Yes,Fatigue,Smoking history,Never,Moderate,137,73,OK,79,36.3,98,90,168,No diagnosis,No medication,Synthetic
+SYN0444,35,Male,175,93.4,30.5,30.5,No,Routine check-up,Family history of heart disease,Former,Low,119,85,OK,81,36.8,98,60,201,No diagnosis,No medication,Synthetic
+SYN0445,47,Female,168,85.3,30.2,26.0,Yes,Routine check-up,No history reported,Never,Moderate,111,88,OK,93,37.1,97,88,141,No diagnosis,No medication,Synthetic
+SYN0446,24,Female,156,92.9,38.2,33.8,Yes,Fatigue,Sedentary lifestyle,Never,Moderate,100,69,OK,70,36.8,99,90,156,No diagnosis,No medication,Synthetic
+SYN0447,58,Male,151,60.6,26.6,22.9,Yes,No reported symptoms,No history reported,Current,Moderate,137,61,OK,81,37.1,98,123,153,No diagnosis,No medication,Synthetic
+SYN0448,68,Female,177,79.8,25.5,27.6,Yes,Dizziness,No history reported,Never,Moderate,115,86,OK,84,36.9,97,108,177,Hypertension,Antihypertensive,Synthetic
+SYN0449,82,Female,154,80.8,34.1,28.9,Yes,Fatigue,Previous respiratory illness,Never,Low,147,83,OK,67,36.8,96,147,253,No diagnosis,No medication,Synthetic
+SYN0450,20,Female,159,105.4,41.7,35.7,Yes,Increased thirst,Previous respiratory illness,Never,High,107,82,OK,76,37.4,98,111,170,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0451,48,Female,148,68.0,31.0,24.3,Yes,No reported symptoms,No history reported,Never,Moderate,131,82,OK,82,37.3,96,84,204,No diagnosis,No medication,Synthetic
+SYN0452,78,Male,159,74.5,29.5,25.1,Yes,No reported symptoms,No history reported,Never,Low,148,77,OK,53,36.5,97,135,194,No diagnosis,No medication,Synthetic
+SYN0453,18,Male,166,76.4,27.7,26.2,Yes,Cough,Previous respiratory illness,Never,Moderate,109,74,OK,83,36.8,95,60,207,Asthma,Inhaler,Synthetic
+SYN0454,56,Male,163,86.1,32.4,28.1,Yes,No reported symptoms,Family history of diabetes,Current,High,115,78,OK,74,36.4,96,60,195,Hypertension,Antihypertensive,Synthetic
+SYN0455,18,Female,155,55.8,23.2,20.1,Yes,Headache,Family history of diabetes,Never,Moderate,115,57,OK,72,36.7,97,104,113,Hypertension,Antihypertensive,Synthetic
+SYN0456,79,Male,189,101.9,28.5,34.2,Yes,Wheezing,Family history of heart disease,Never,Low,128,73,OK,102,37.1,96,139,221,Asthma,Inhaler,Synthetic
+SYN0457,54,Male,159,56.5,22.3,18.8,Yes,Fatigue,No history reported,Never,Low,99,86,OK,86,36.9,97,106,198,No diagnosis,No medication,Synthetic
+SYN0458,43,Male,153,94.4,40.3,29.6,Yes,Increased thirst,Family history of heart disease,Former,Moderate,110,91,OK,64,36.7,94,98,180,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0459,18,Female,161,85.5,33.0,28.3,Yes,Fatigue,Family history of heart disease,Former,High,116,62,OK,75,36.9,97,99,195,No diagnosis,No medication,Synthetic
+SYN0460,20,Male,153,89.5,38.2,28.5,Yes,Fatigue,Family history of diabetes,Former,Low,126,90,OK,84,37.0,96,140,154,No diagnosis,No medication,Synthetic
+SYN0461,80,Female,165,112.2,41.2,33.2,Yes,Frequent urination,Family history of heart disease,Former,Moderate,143,79,OK,84,36.4,99,132,202,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0462,27,Female,160,80.8,31.6,33.6,Yes,Routine check-up,Smoking history,Never,Moderate,121,60,OK,86,36.3,96,77,185,No diagnosis,No medication,Synthetic
+SYN0463,27,Male,177,91.0,29.0,32.5,Yes,Dizziness,Smoking history,Never,High,173,61,OK,67,36.9,96,70,184,Hypertension,Antihypertensive,Synthetic
+SYN0464,64,Female,164,81.1,30.2,30.7,Yes,Fatigue,No history reported,Current,Moderate,95,89,OK,74,37.3,97,144,198,No diagnosis,No medication,Synthetic
+SYN0465,75,Male,158,85.2,34.1,32.0,Yes,Headache,No history reported,Former,High,156,73,OK,102,37.4,98,140,182,Hypertension,Antihypertensive,Synthetic
+SYN0466,27,Female,163,85.0,32.0,32.5,Yes,Fatigue,No history reported,Never,Low,133,78,OK,68,36.3,97,150,205,No diagnosis,No medication,Synthetic
+SYN0467,35,Female,141,72.0,36.2,24.6,Yes,Headache,Family history of heart disease,Never,Moderate,115,60,OK,75,37.2,94,108,261,Hypertension,Antihypertensive,Synthetic
+SYN0468,41,Female,143,65.6,32.1,22.6,Yes,Routine check-up,No history reported,Never,Moderate,91,75,OK,49,36.7,98,67,249,No diagnosis,No medication,Synthetic
+SYN0469,86,Male,171,90.1,30.8,28.6,Yes,Increased thirst,Smoking history,Never,Low,149,89,OK,84,37.3,96,138,196,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0470,67,Male,154,87.9,37.1,28.8,Yes,No reported symptoms,Family history of heart disease,Never,Moderate,129,91,OK,73,36.7,97,157,155,Hypertension,Antihypertensive,Synthetic
+SYN0471,29,Male,150,74.5,33.1,23.5,Yes,No reported symptoms,Previous respiratory illness,Never,Moderate,122,88,OK,83,36.9,95,102,211,No diagnosis,No medication,Synthetic
+SYN0472,21,Male,153,58.9,25.2,22.1,Yes,Frequent urination,Smoking history,Never,High,107,70,OK,80,36.1,98,99,147,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0473,69,Male,155,61.4,25.6,23.5,Yes,Routine check-up,Family history of heart disease,Former,Moderate,100,82,OK,92,36.4,94,110,240,No diagnosis,No medication,Synthetic
+SYN0474,32,Male,144,88.4,42.6,30.1,Yes,Fatigue,Family history of heart disease,Former,Moderate,108,87,OK,69,36.3,97,125,232,No diagnosis,No medication,Synthetic
+SYN0475,74,Male,164,66.1,24.6,24.7,No,Headache,Previous respiratory illness,Never,Moderate,128,80,OK,71,36.2,97,117,254,Hypertension,Antihypertensive,Synthetic
+SYN0476,45,Female,160,65.5,25.6,23.6,Yes,Frequent urination,Sedentary lifestyle,Never,Moderate,103,81,OK,77,37.5,97,167,276,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0477,26,Male,179,63.3,19.8,23.2,Yes,No reported symptoms,Smoking history,Former,Moderate,107,51,OK,90,36.8,98,113,197,Hypertension,Antihypertensive,Synthetic
+SYN0478,24,Male,153,88.4,37.8,30.8,Yes,Dizziness,Smoking history,Current,High,128,82,OK,73,36.5,98,118,165,Hypertension,Antihypertensive,Synthetic
+SYN0479,36,Male,163,67.2,25.3,27.7,Yes,Cough,No history reported,Never,High,125,87,OK,75,36.8,94,77,175,Asthma,Inhaler,Synthetic
+SYN0480,62,Male,169,82.4,28.9,28.1,Yes,Increased thirst,No history reported,Former,Low,128,83,OK,80,35.9,96,111,207,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0481,79,Female,168,55.2,19.6,19.0,Yes,No reported symptoms,Family history of diabetes,Current,Moderate,137,79,OK,71,37.3,96,109,193,Hypertension,Antihypertensive,Synthetic
+SYN0482,33,Female,162,88.6,33.8,29.9,Yes,Routine check-up,Sedentary lifestyle,Never,Moderate,113,82,OK,79,37.1,98,101,215,No diagnosis,No medication,Synthetic
+SYN0483,79,Male,169,84.4,29.6,29.6,No,Headache,Smoking history,Never,High,152,88,OK,83,36.3,98,150,203,Hypertension,Antihypertensive,Synthetic
+SYN0484,43,Female,161,125.9,48.6,38.2,Yes,Dizziness,Family history of heart disease,Current,Low,116,81,OK,98,36.4,99,103,159,Hypertension,Antihypertensive,Synthetic
+SYN0485,22,Female,172,80.0,27.0,27.1,No,Fatigue,Sedentary lifestyle,Never,Moderate,128,67,OK,75,36.7,95,117,162,Type 2 Diabetes,Glucose-lowering medicine,Synthetic
+SYN0486,22,Other,158,85.0,34.0,26.0,Yes,Routine check-up,Family history of diabetes,Never,Moderate,115,68,OK,79,36.7,94,109,141,No diagnosis,No medication,Synthetic
+SYN0487,63,Female,152,85.9,37.2,32.1,Yes,No reported symptoms,Previous respiratory illness,Never,Moderate,141,97,OK,100,36.7,99,85,183,Hypertension,Antihypertensive,Synthetic
+SYN0488,56,Male,166,105.6,38.3,33.4,Yes,Headache,Sedentary lifestyle,Never,High,157,81,OK,62,36.3,95,93,174,Hypertension,Antihypertensive,Synthetic
+SYN0489,60,Female,161,105.2,40.6,32.6,Yes,No reported symptoms,Family history of diabetes,Current,Moderate,132,97,OK,66,36.5,100,142,197,Hypertension,Antihypertensive,Synthetic
+SYN0490,27,Male,167,67.1,24.1,21.5,Yes,No reported symptoms,Smoking history,Never,Low,149,91,OK,74,37.1,99,107,162,No diagnosis,No medication,Synthetic
+SYN0491,23,Female,163,70.3,26.5,26.7,Yes,No reported symptoms,Smoking history,Never,Low,85,74,OK,90,37.7,100,92,179,No diagnosis,No medication,Synthetic
+SYN0492,49,Male,168,87.9,31.1,29.4,Yes,No reported symptoms,Previous respiratory illness,Current,Moderate,103,71,OK,60,36.0,97,68,200,Hypertension,Antihypertensive,Synthetic
+SYN0493,74,Female,174,74.0,24.4,23.6,Yes,Routine check-up,Sedentary lifestyle,Never,High,141,76,OK,62,36.8,99,106,216,No diagnosis,No medication,Synthetic
+SYN0494,73,Female,163,84.5,31.8,32.8,Yes,Dizziness,Previous respiratory illness,Never,Moderate,153,80,OK,89,36.8,100,81,245,Hypertension,Antihypertensive,Synthetic
+SYN0495,59,Male,156,53.0,21.8,19.4,Yes,No reported symptoms,Sedentary lifestyle,Never,Moderate,127,87,OK,45,36.8,95,81,214,Hypertension,Antihypertensive,Synthetic
+SYN0496,59,Male,177,48.8,15.6,16.4,Yes,Headache,Smoking history,Never,Low,130,106,OK,71,37.0,93,103,183,Hypertension,Antihypertensive,Synthetic
+SYN0497,81,Male,169,53.5,18.7,18.0,Yes,Headache,Previous respiratory illness,Never,Low,138,87,OK,65,36.3,99,65,227,Hypertension,Antihypertensive,Synthetic
+SYN0498,74,Female,160,86.3,33.7,33.3,Yes,No reported symptoms,Smoking history,Never,Moderate,132,83,OK,74,36.2,100,88,203,No diagnosis,No medication,Synthetic
+SYN0499,67,Male,172,58.3,19.7,22.5,Yes,No reported symptoms,Family history of heart disease,Never,High,130,77,OK,68,37.3,95,120,150,Hypertension,Antihypertensive,Synthetic
+SYN0500,85,Female,153,78.4,33.5,31.1,Yes,Fatigue,No history reported,Never,Moderate,114,84,OK,79,36.4,96,155,187,No diagnosis,No medication,Synthetic
