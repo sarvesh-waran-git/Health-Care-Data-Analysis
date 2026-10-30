@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pharmacy Performance Dashboard</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root{--bg:#f3f6f4;--card:#fff;--ink:#14231e;--muted:#5b6b65;--line:#dbe4df;--c1:#0f766e;--c2:#c2410c;--c3:#4f46e5;--c4:#ca8a04;--warn:#b45309;--ok:#166534;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1714;--card:#16231f;--ink:#e6f0ec;--muted:#93a69e;--line:#27382f;--c1:#2dd4bf;--c2:#fb923c;--c3:#a5b4fc;--c4:#facc15;--warn:#fbbf24;--ok:#86efac;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1714;--card:#16231f;--ink:#e6f0ec;--muted:#93a69e;--line:#27382f;--c1:#2dd4bf;--c2:#fb923c;--c3:#a5b4fc;--c4:#facc15;--warn:#fbbf24;--ok:#86efac;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;line-height:1.45}
+main{max-width:1180px;margin:0 auto;padding:20px 16px 40px}
+h1{font-size:1.6rem;margin:0 0 2px}h2{font-size:1.05rem;margin:0 0 10px}
+.sub{color:var(--muted);margin:0 0 16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:14px}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+button,select,input[type=file]{font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:7px 10px}
+button{cursor:pointer;background:var(--c1);color:#fff;border-color:var(--c1)}button.alt{background:var(--card);color:var(--ink);border-color:var(--line)}
+button:focus-visible,select:focus-visible{outline:2px solid var(--c3);outline-offset:2px}
+label{font-size:.85rem;color:var(--muted)}
+.note{font-size:.85rem;color:var(--warn);margin:8px 0 0}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-bottom:14px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px}
+.kpi b{display:block;font-size:1.45rem}.kpi span{font-size:.82rem;color:var(--muted)}
+.up{color:var(--ok)}.down{color:var(--c2)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:14px}
+.ch{position:relative;height:280px}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}th{color:var(--muted);font-weight:600}
+.tag{padding:1px 7px;border-radius:99px;font-size:.75rem;background:var(--line)}
+.map{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+details summary{cursor:pointer;font-weight:600}
+#summary li{margin-bottom:5px}
+@media print{.noprint{display:none!important}body{background:#fff;color:#000}.card,.kpi{break-inside:avoid}}
+</style></head>
+<body><main>
+<h1>Pharmacy Performance Dashboard</h1>
+<p class="sub">Operational KPIs for sales, margin, growth and product mix. No medical claims are made.</p>
+
+<section class="card noprint">
+<div class="bar">
+<input type="file" id="file" accept=".csv" aria-label="Upload CSV">
+<button id="sample" class="alt">Load larger demo data</button>
+<label>Category <select id="cat"></select></label>
+<label>Cost column is <select id="cmode"><option value="unit">per unit</option><option value="total">line total</option></select></label>
+<button id="print" class="alt">Print summary</button>
+</div>
+<p class="note" id="banner"></p>
+<details style="margin-top:8px"><summary>Column mapping (auto-detected, change if wrong)</summary><div class="map" id="map" style="margin-top:8px"></div></details>
+</section>
+
+<section class="card" id="quality"></section>
+<div class="kpis" id="kpis"></div>
+
+<div class="grid">
+<section class="card"><h2>Monthly revenue and margin</h2><div class="ch"><canvas id="c1"></canvas></div></section>
+<section class="card"><h2>Revenue by category</h2><div class="ch"><canvas id="c2"></canvas></div></section>
+<section class="card"><h2>Branded vs generic revenue share</h2><div class="ch"><canvas id="c3"></canvas></div></section>
+<section class="card"><h2>Top products: contribution to revenue</h2><div class="ch"><canvas id="c4"></canvas></div></section>
+</div>
+
+<section class="card"><h2>Branded vs generic comparison</h2><div class="scroll"><table id="ttype"></table></div></section>
+<section class="card"><h2>Product priorities</h2><div class="scroll"><table id="tprod"></table></div></section>
+<section class="card" id="summary"></section>
+</main>
+
+<script>
+const $=s=>document.querySelector(s);
+const fmt=n=>'₹'+Math.round(n).toLocaleString('en-IN');
+const pct=n=>(n*100).toFixed(1)+'%';
+let HEAD=[],RAW=[],MAP={},charts={},TOTAL=0,CLEAN=[],ISS={};
+const FIELDS=[['date','Date'],['product','Product'],['category','Category'],['type','Branded/Generic'],['qty','Quantity'],['revenue','Revenue (optional)'],['price','Unit price'],['cost','Cost'],['stock','Stock (optional)']];
+
+function parseCSV(t){const r=[];let row=[],f='',q=false;for(let i=0;i<t.length;i++){const c=t[i];
+if(q){if(c=='"'){if(t[i+1]=='"'){f+='"';i++}else q=false}else f+=c}
+else if(c=='"')q=true;else if(c==','){row.push(f);f=''}
+else if(c=='\n'||c=='\r'){if(c=='\r'&&t[i+1]=='\n')i++;row.push(f);f='';if(row.some(x=>x.trim()!==''))r.push(row);row=[]}else f+=c}
+row.push(f);if(row.some(x=>x.trim()!==''))r.push(row);return r}
+const num=v=>{const x=parseFloat(String(v).replace(/[₹$,\s]/g,''));return isNaN(x)?null:x};
+function pdate(v){let m=String(v).match(/^(\d{1,2})[\/\-.](\d{1,2})[\/\-.](\d{4})$/),d;
+d=m?new Date(+m[3],+m[2]-1,+m[1]):new Date(v);return isNaN(d)||d.getFullYear()<2000||d.getFullYear()>2100?null:d}
+
+function load(text,label){
+const rows=parseCSV(text);if(rows.length<2){$('#banner').textContent='That file has no data rows. Upload a CSV with a header row.';return}
+HEAD=rows[0].map(h=>h.trim());
+RAW=rows.slice(1).map(r=>Object.fromEntries(HEAD.map((h,i)=>[h,(r[i]||'').trim()])));
+const pats={date:/date|day/i,category:/categ/i,type:/brand|generic|type|class/i,qty:/qty|quant|units|sold/i,revenue:/revenue|sales|amount/i,cost:/cost|cogs/i,price:/price|mrp/i,stock:/stock|inventory|on.?hand/i,product:/product|item|drug|medicine|sku|name/i};
+const used=new Set();MAP={};
+for(const k of Object.keys(pats)){const h=HEAD.find(h=>!used.has(h)&&pats[k].test(h));if(h){MAP[k]=h;used.add(h)}}
+if(MAP.revenue&&MAP.cost&&MAP.qty){let sr=0,sc=0,su=0;RAW.forEach(r=>{const a=num(r[MAP.revenue]),c=num(r[MAP.cost]),q=num(r[MAP.qty]);if(a>0&&c>=0&&q>0){sr+=a;sc+=c;su+=c*q}});$('#cmode').value=(su>sr*1.2&&sc<=sr)||/total/i.test(MAP.cost)?'total':'unit'}
+buildMap();$('#banner').textContent=label;run()}
+
+function buildMap(){$('#map').innerHTML=FIELDS.map(([k,l])=>`<label>${l}<br><select data-k="${k}"><option value="">(none)</option>${HEAD.map(h=>`<option ${MAP[k]==h?'selected':''}>${h}</option>`).join('')}</select></label>`).join('');
+document.querySelectorAll('#map select').forEach(s=>s.onchange=()=>{MAP[s.dataset.k]=s.value;run()})}
+
+/* Step 1: validate */
+function validate(){
+ISS={'Missing product or category':0,'Invalid date':0,'Invalid quantity':0,'Invalid revenue or price':0,'Invalid cost':0,'Duplicate rows':0};
+const seen=new Set(),out=[];TOTAL=RAW.length;const total=$('#cmode').value=='total';
+for(const r of RAW){
+const key=JSON.stringify(r);if(seen.has(key)){ISS['Duplicate rows']++;continue}seen.add(key);
+const product=r[MAP.product]||'',cat=r[MAP.category]||'';
+if(!product||!cat){ISS['Missing product or category']++;continue}
+const date=pdate(r[MAP.date]||'');if(!date){ISS['Invalid date']++;continue}
+const qty=num(r[MAP.qty]);if(qty===null||qty<=0){ISS['Invalid quantity']++;continue}
+let rev=MAP.revenue?num(r[MAP.revenue]):null;
+if(rev===null&&MAP.price){const p=num(r[MAP.price]);if(p!==null&&p>=0)rev=p*qty}
+if(rev===null||rev<0){ISS['Invalid revenue or price']++;continue}
+let c=num(r[MAP.cost]);if(c===null||c<0){ISS['Invalid cost']++;continue}
+const cost=total?c:c*qty;
+const t=r[MAP.type]||'';
+const type=/gener/i.test(t)||(!t&&/generic/i.test(product))?'Generic':/brand|innov|original/i.test(t)?'Branded':'Other';
+const stock=MAP.stock?num(r[MAP.stock]):null;
+out.push({date,month:date.getFullYear()+'-'+String(date.getMonth()+1).padStart(2,'0'),product,cat,type,qty,rev,cost,stock});}
+CLEAN=out}
+
+const group=(a,f)=>{const m={};for(const r of a){const k=f(r);const g=m[k]||(m[k]={rev:0,cost:0,qty:0});g.rev+=r.rev;g.cost+=r.cost;g.qty+=r.qty}return m};
+const mg=g=>g.rev?(g.rev-g.cost)/g.rev:0;
+const mk=(id,cfg)=>{if(charts[id])charts[id].destroy();charts[id]=new Chart($('#'+id),cfg)};
+
+function run(){
+validate();
+const cs=[...new Set(CLEAN.map(r=>r.cat))].sort(),cur=$('#cat').value;
+$('#cat').innerHTML='<option value="">All categories</option>'+cs.map(c=>`<option ${c==cur?'selected':''}>${c}</option>`).join('');
+const data=CLEAN.filter(r=>!$('#cat').value||r.cat==$('#cat').value);
+const dropped=TOTAL-CLEAN.length;
+$('#quality').innerHTML=`<h2>Step 1: Data validation</h2><p style="margin:0 0 8px">${CLEAN.length.toLocaleString('en-IN')} of ${TOTAL.toLocaleString('en-IN')} rows passed checks on date, quantity, revenue, cost and category (${TOTAL?pct(CLEAN.length/TOTAL):'0%'}). ${dropped} excluded.</p>`+
+Object.entries(ISS).map(([k,v])=>`<span class="tag" style="margin-right:6px">${k}: ${v}</span>`).join('');
+if(!data.length){$('#kpis').innerHTML='<p class="card">No valid rows to analyse. Check the column mapping above.</p>';return}
+/* Step 2: KPIs */
+const all=group(data,()=> 'a').a,months=group(data,r=>r.month),mk_=Object.keys(months).sort();
+const gp=all.rev-all.cost,last=months[mk_[mk_.length-1]],prev=months[mk_[mk_.length-2]];
+const growth=prev&&prev.rev?(last.rev-prev.rev)/prev.rev:null;
+const kp=(v,l,x='')=>`<div class="kpi"><b class="${x}">${v}</b><span>${l}</span></div>`;
+$('#kpis').innerHTML=kp(fmt(all.rev),'Total revenue')+kp(fmt(gp),'Gross profit')+kp(pct(mg(all)),'Gross margin')+kp(all.qty.toLocaleString('en-IN'),'Units sold')+
+kp(growth===null?'n/a':(growth>=0?'+':'')+pct(growth),'Latest month vs previous ('+mk_[mk_.length-1]+')',growth>=0?'up':'down');
+const css=getComputedStyle(document.documentElement),C=n=>css.getPropertyValue(n).trim();
+Chart.defaults.color=C('--muted');Chart.defaults.borderColor=C('--line');Chart.defaults.maintainAspectRatio=false;
+mk('c1',{data:{labels:mk_,datasets:[{type:'bar',label:'Revenue (₹)',data:mk_.map(m=>months[m].rev),backgroundColor:C('--c1'),yAxisID:'y'},{type:'line',label:'Margin %',data:mk_.map(m=>mg(months[m])*100),borderColor:C('--c2'),backgroundColor:C('--c2'),yAxisID:'y1',tension:.3}]},options:{scales:{y:{ticks:{callback:v=>'₹'+(v/1000)+'k'}},y1:{position:'right',grid:{drawOnChartArea:false},ticks:{callback:v=>v+'%'}}}}});
+const cat=group(data,r=>r.cat),cl=Object.keys(cat).sort((a,b)=>cat[b].rev-cat[a].rev);
+mk('c2',{type:'bar',data:{labels:cl,datasets:[{label:'Revenue',data:cl.map(c=>cat[c].rev),backgroundColor:C('--c3')}]},options:{indexAxis:'y',plugins:{legend:{display:false}}}});
+/* Step 3: branded vs generic */
+const ty=group(data,r=>r.type),tl=Object.keys(ty).sort();
+mk('c3',{type:'doughnut',data:{labels:tl,datasets:[{data:tl.map(t=>ty[t].rev),backgroundColor:[C('--c1'),C('--c2'),C('--c4')],borderColor:C('--card')}]}});
+$('#ttype').innerHTML='<tr><th>Type</th><th>Revenue</th><th>Share</th><th>Units</th><th>Avg price/unit</th><th>Gross profit</th><th>Margin</th></tr>'+
+tl.map(t=>{const g=ty[t];return `<tr><td>${t}</td><td>${fmt(g.rev)}</td><td>${pct(g.rev/all.rev)}</td><td>${g.qty.toLocaleString('en-IN')}</td><td>${fmt(g.rev/g.qty)}</td><td>${fmt(g.rev-g.cost)}</td><td>${pct(mg(g))}</td></tr>`}).join('');
+/* product contribution + stock */
+const pr=group(data,r=>r.product),pl=Object.keys(pr).sort((a,b)=>pr[b].rev-pr[a].rev);
+const stock={};data.slice().sort((a,b)=>a.date-b.date).forEach(r=>{if(r.stock!==null)stock[r.product]=r.stock});
+const nm=mk_.length;let cum=0;
+mk('c4',{type:'bar',data:{labels:pl.slice(0,10),datasets:[{label:'% of revenue',data:pl.slice(0,10).map(p=>pr[p].rev/all.rev*100),backgroundColor:C('--c4')}]},options:{plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>v+'%'}},x:{ticks:{maxRotation:60}}}}});
+const hasStock=Object.keys(stock).length>0;
+$('#tprod').innerHTML='<tr><th>Product</th><th>Revenue</th><th>Contribution</th><th>Cumulative</th><th>Margin</th><th>Units</th>'+(hasStock?'<th>Months of cover</th>':'')+'<th>Flag</th></tr>'+
+pl.slice(0,12).map(p=>{const g=pr[p],m=mg(g);cum+=g.rev/all.rev;const cover=hasStock&&stock[p]!==undefined?stock[p]/(g.qty/nm):null;
+const flags=[];if(cover!==null&&cover<1)flags.push('Restock');if(m<mg(all)-.08)flags.push('Low margin');if(m>mg(all)+.08)flags.push('High margin');
+return `<tr><td>${p}</td><td>${fmt(g.rev)}</td><td>${pct(g.rev/all.rev)}</td><td>${pct(cum)}</td><td>${pct(m)}</td><td>${g.qty.toLocaleString('en-IN')}</td>${hasStock?`<td>${cover===null?'-':cover.toFixed(1)}</td>`:''}<td>${flags.join(', ')||'-'}</td></tr>`}).join('');
+/* one-page summary */
+const bg=ty.Branded,gn=ty.Generic,topc=cl[0],top3=pl.slice(0,3).reduce((s,p)=>s+pr[p].rev,0)/all.rev;
+const worst=pl.filter(p=>pr[p].rev/all.rev>.02).sort((a,b)=>mg(pr[a])-mg(pr[b]))[0];
+const low=hasStock?pl.filter(p=>stock[p]!==undefined&&stock[p]/(pr[p].qty/nm)<1).slice(0,3):[];
+$('#summary').innerHTML=`<h2>One-page performance summary${$('#cat').value?' ('+$('#cat').value+')':''}</h2><ul>
+<li>Revenue of <b>${fmt(all.rev)}</b> from ${all.qty.toLocaleString('en-IN')} units over ${nm} months, with gross profit of ${fmt(gp)} (${pct(mg(all))} margin).</li>
+<li>${growth===null?'Not enough months to calculate growth.':`Latest month revenue moved ${growth>=0?'up':'down'} ${pct(Math.abs(growth))} versus the previous month.`}</li>
+<li>${topc} is the largest category at ${pct(cat[topc].rev/all.rev)} of revenue. The top 3 products contribute ${pct(top3)}.</li>
+<li>${bg&&gn?`Branded products earn ${pct(mg(bg))} margin on ${pct(bg.rev/all.rev)} of revenue; generics earn ${pct(mg(gn))} margin on ${pct(gn.rev/all.rev)}. ${mg(bg)>mg(gn)?'Branded':'Generic'} carries the higher margin.`:'Branded/generic comparison needs a type column with both values.'}</li>
+${worst?`<li>Margin watch: ${worst} has the lowest margin among major products (${pct(mg(pr[worst]))}).</li>`:''}
+${low.length?`<li>Stock priority: ${low.join(', ')} have under one month of cover at current sales pace.</li>`:''}
+<li>Data quality: ${dropped} of ${TOTAL} rows were excluded after validation.</li></ul>
+<p style="color:var(--muted);font-size:.85rem;margin:8px 0 0">Based on supplied operational sales data only. Not a clinical or medical assessment.</p>`}
+
+/* sample data (synthetic) */
+function sample(){let s=42;const rnd=()=>{s|=0;s=s+0x6D2B79F5|0;let t=Math.imul(s^s>>>15,1|s);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296};
+const P=[['Paracetamol 500','Pain Relief','Generic',20,.55],['Paracetamol Brand','Pain Relief','Branded',38,.72],['Ibuprofen 400','Pain Relief','Generic',32,.58],['Diclofenac Gel','Pain Relief','Branded',95,.7],
+['Amoxicillin 500','Antibiotics','Generic',85,.6],['Azithromycin 500','Antibiotics','Branded',140,.74],['Cefixime 200','Antibiotics','Generic',110,.62],
+['Amlodipine 5','Cardiac','Generic',45,.5],['Atorvastatin 10','Cardiac','Branded',120,.7],['Telmisartan 40','Cardiac','Generic',78,.55],
+['Metformin 500','Diabetes','Generic',30,.52],['Glimepiride 2','Diabetes','Branded',90,.73],['Insulin Pen','Diabetes','Branded',620,.84],
+['Vitamin D3','Vitamins','Branded',150,.6],['Multivitamin','Vitamins','Generic',180,.58],['Calcium Tablets','Vitamins','Generic',140,.57],
+['Pantoprazole 40','Gastro','Generic',60,.5],['Omeprazole','Gastro','Branded',88,.7],['ORS Sachet','Gastro','Generic',22,.6]];
+const M=['2025-11','2025-12','2026-01','2026-02','2026-03','2026-04','2026-05','2026-06','2026-07','2026-08','2026-09','2026-10'];
+let o=['date,product,category,type,quantity,unit_price,unit_cost,stock_on_hand'];
+M.forEach((m,mi)=>P.forEach(p=>{for(let k=0;k<2;k++){const q=Math.round((20+rnd()*60)*(1+mi*.02));const d=m+'-'+String(1+Math.floor(rnd()*27)).padStart(2,'0');
+o.push([d,p[0],p[1],p[2],q,p[3],(p[3]*p[4]*(.9+rnd()*.2)).toFixed(2),Math.round(40+rnd()*220)].join(','))}}));
+o.push('2026-02-30,Paracetamol 500,Pain Relief,Generic,10,20,11,50','2026-03-04,Metformin 500,Diabetes,Generic,-5,30,15,40','2026-03-05,Vitamin D3,,Branded,12,150,90,30',o[1]);
+return o.join('\n')}
+
+$('#file').onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>load(r.result,'Loaded '+f.name);r.readAsText(f)};
+$('#sample').onclick=()=>load(sample(),'Showing built-in synthetic sample. Upload the Synthetic pharmacy sales CSV to use your data.');
+$('#cat').onchange=run;$('#cmode').onchange=run;$('#print').onclick=()=>print();
+const DATA=`Date,Product,Category,Brand_Type,Quantity,Sales,Cost,Stock
+2026-01-03,Paracetamol 500mg,Pain Relief,Generic,120,2400,1440,180
+2026-01-05,Ibuprofen 200mg,Pain Relief,Branded,65,1950,1170,42
+2026-01-08,Cetirizine 10mg,Allergy,Generic,90,1350,810,95
+2026-01-12,Vitamin C 500mg,Vitamins,Branded,48,2400,1440,28
+2026-01-16,ORS Sachets,Hydration,Generic,110,1650,990,210
+2026-01-21,Cough Syrup 100ml,Cold & Cough,Branded,35,2800,1820,18
+2026-02-02,Paracetamol 500mg,Pain Relief,Generic,135,2700,1620,165
+2026-02-06,Amoxicillin 250mg,Antibiotics,Branded,40,3200,2240,12
+2026-02-10,Cetirizine 10mg,Allergy,Generic,105,1575,945,80
+2026-02-14,Multivitamin Tablets,Vitamins,Branded,52,3640,2184,24
+2026-02-18,Antacid Tablets,Digestive Health,Generic,88,1760,1056,67
+2026-02-23,Cough Syrup 100ml,Cold & Cough,Branded,42,3360,2184,15
+2026-03-01,Paracetamol 500mg,Pain Relief,Generic,150,3000,1800,140
+2026-03-04,Ibuprofen 200mg,Pain Relief,Branded,72,2160,1296,35
+2026-03-09,Vitamin C 500mg,Vitamins,Branded,60,3000,1800,20
+2026-03-13,ORS Sachets,Hydration,Generic,125,1875,1125,175
+2026-03-18,Amoxicillin 250mg,Antibiotics,Branded,46,3680,2576,9
+2026-03-25,Antacid Tablets,Digestive Health,Generic,96,1920,1152,54
+2026-04-02,Paracetamol 500mg,Pain Relief,Generic,142,2840,1704,130
+2026-04-07,Cetirizine 10mg,Allergy,Generic,115,1725,1035,72
+2026-04-11,Multivitamin Tablets,Vitamins,Branded,58,4060,2436,19
+2026-04-16,Cough Syrup 100ml,Cold & Cough,Branded,50,4000,2600,11
+2026-04-20,ORS Sachets,Hydration,Generic,138,2070,1242,160
+2026-04-27,Amoxicillin 250mg,Antibiotics,Branded,38,3040,2128,7
+2026-05-03,Ibuprofen 200mg,Pain Relief,Branded,80,2400,1440,31
+2026-05-08,Paracetamol 500mg,Pain Relief,Generic,160,3200,1920,115
+2026-05-12,Vitamin C 500mg,Vitamins,Branded,66,3300,1980,16
+2026-05-17,Antacid Tablets,Digestive Health,Generic,102,2040,1224,48
+2026-05-22,Cetirizine 10mg,Allergy,Generic,122,1830,1098,61
+2026-05-28,Cough Syrup 100ml,Cold & Cough,Branded,44,3520,2288,8
+2026-06-02,ORS Sachets,Hydration,Generic,145,2175,1305,145
+2026-06-07,Amoxicillin 250mg,Antibiotics,Branded,43,3440,2408,6
+2026-06-12,Paracetamol 500mg,Pain Relief,Generic,172,3440,2064,98
+2026-06-16,Multivitamin Tablets,Vitamins,Branded,63,4410,2646,14
+2026-06-21,Ibuprofen 200mg,Pain Relief,Branded,86,2580,1548,25
+2026-06-27,Antacid Tablets,Digestive Health,Generic,108,2160,1296,39`;
+load(DATA,'Showing Synthetic_pharmacy_sales_sample.csv (36 rows). Upload another CSV to replace it.');
+</script></body></html>
